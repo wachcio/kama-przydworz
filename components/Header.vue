@@ -3,9 +3,11 @@
     <b-row>
       <b-col class="header-col">
         <div class="logo">
-          kama
-          <span class="logo__yellow">-</span>przydwórz
-          <span class="logo__yellow">.</span>pl
+          <p class="nobreak">
+            kama
+            <span class="logo__yellow">-</span>przydwórz
+            <span class="logo__yellow">.</span>pl
+          </p>
         </div>
         <a :href="`tel:${phoneNumber}`">
           <div class="call">
@@ -32,6 +34,11 @@ export default {
     return {
       phoneNumber: '+48 123 456 789'
     }
+  },
+  computed: {
+    logoText() {
+      return `kama<span class="logo__yellow">-</span>przydwórz<span class="logo__yellow">.</span>pl`
+    }
   }
 }
 </script>
@@ -52,6 +59,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 465px;
 }
 .logo {
   //   font-family: 'Lato', sans-serif;
@@ -61,7 +69,7 @@ header {
   min-width: 419px;
 }
 .logo__yellow {
-  color: $yellow;
+  color: $yellow !important;
 }
 .call {
   display: flex;
@@ -95,5 +103,8 @@ a {
 span {
   margin: 0;
   padding: 0;
+}
+.nobreak {
+  white-space: nowrap;
 }
 </style>
