@@ -7,18 +7,18 @@
           <span class="logo__yellow">-</span>przydwórz
           <span class="logo__yellow">.</span>pl
         </div>
-        <!-- <a :href="`tel:${phoneNumber}`"> -->
-        <div class="call">
-          <div class="call-phone">
-            <img src="@/assets/img/vaadin-phone-landline.svg" alt srcset />
-          </div>
-          <div class="call-wrapper">
-            <div class="call-number">{{phoneNumber}}</div>
+        <a :href="`tel:${phoneNumber}`">
+          <div class="call">
+            <div class="call-phone">
+              <img src="@/assets/img/vaadin-phone-landline.svg" alt srcset />
+            </div>
+            <div class="call-wrapper">
+              <div class="call-number">{{ phoneNumber }}</div>
 
-            <div class="call-text">zadzwoń i zarezerwuj już dziś</div>
+              <div class="call-text">zadzwoń i zarezerwuj już dziś</div>
+            </div>
           </div>
-        </div>
-        <!-- </a> -->
+        </a>
       </b-col>
       <b-col class="header-col">NAV</b-col>
     </b-row>
@@ -87,5 +87,9 @@ header {
   height: 36px;
   width: 36px;
   margin-right: 1.2rem;
+}
+a {
+  text-decoration: none;
+  color: $white;
 }
 </style>
