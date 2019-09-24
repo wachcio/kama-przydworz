@@ -3,10 +3,11 @@
     <b-row>
       <b-col class="header-col">
         <div class="logo">
-          <p class="nobreak">
-            kama
-            <span class="logo__yellow">-</span>przydwórz
-            <span class="logo__yellow">.</span>pl
+          <p>
+            kama<span class="logo__yellow">-</span>przydwórz<span
+              class="logo__yellow"
+              >.</span
+            >pl
           </p>
         </div>
         <a :href="`tel:${phoneNumber}`">
@@ -22,7 +23,7 @@
           </div>
         </a>
       </b-col>
-      <b-col class="header-col">NAV</b-col>
+      <b-col class="header-col justify-content-center">NAV</b-col>
     </b-row>
   </header>
 </template>
