@@ -23,7 +23,7 @@
           </div>
         </a>
       </b-col>
-      <b-col class="header-col justify-content-center">NAV</b-col>
+      <b-col class="header-col justify-content-end">NAV</b-col>
     </b-row>
   </header>
 </template>
