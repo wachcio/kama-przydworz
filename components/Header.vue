@@ -92,4 +92,8 @@ a {
   text-decoration: none;
   color: $white;
 }
+span {
+  margin: 0;
+  padding: 0;
+}
 </style>
