@@ -23,14 +23,17 @@
           </div>
         </a>
       </b-col>
-      <b-col class="header-col justify-content-end">NAV</b-col>
+      <b-col class="header-col justify-content-end"><Nav /></b-col>
     </b-row>
   </header>
 </template>
 
 <script>
+import Nav from '@/components/Nav'
+
 export default {
   name: 'Header',
+  components: { Nav },
   data() {
     return {
       phoneNumber: '+48 123 456 789'

@@ -5,6 +5,7 @@
   "author": "wachcio",
   "private": true,
   "scripts": {
+    "predev": "npm run lint",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
