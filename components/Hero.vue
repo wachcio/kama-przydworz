@@ -6,7 +6,7 @@
       :interval="4000"
       controls
       indicators
-      background="#ababab"
+      background="#333"
       style="text-shadow: 1px 1px 2px #333;"
     >
       <!-- Text slides with image -->

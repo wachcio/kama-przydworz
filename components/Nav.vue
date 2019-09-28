@@ -38,7 +38,7 @@ export default {
   justify-content: flex-end;
   z-index: 99;
   // align-self: flex-end;
-  @media (min-width: 320px) {
+  @include mq(xxsmall) {
     padding-right: 0.2em;
   }
 }
@@ -57,18 +57,21 @@ export default {
 
 .nav-link {
   color: $white !important;
-  font-size: 1em;
+  font-size: 0.5em;
   // text-transform: uppercase;
-  @media (min-width: 319px) {
+  @include mq(xxsmall) {
     padding-right: 0.6em;
     font-size: 0.6em;
   }
-}
-.navbar-collapse {
-  @media (max-width: 575px) {
-    background-color: #111;
+  @include mq(medium) {
+    font-size: 0.7em;
+  }
+
+  @include mq(large) {
+    font-size: 1em;
   }
 }
+
 .navbar-nav {
   align-items: center;
   justify-content: flex-end;

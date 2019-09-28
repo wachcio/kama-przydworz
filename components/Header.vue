@@ -78,14 +78,15 @@ header {
   //   font-family: 'Lato', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 3rem;
-  min-width: 419px;
-  @media (min-width: 319px) {
+  font-size: 0.6em;
+  // min-width: 419px;
+  @include mq(xsmall) {
     min-width: 0;
-    font-size: 1.2rem;
+    font-size: 0.9em;
   }
-  @media (min-width: 850px) {
-    font-size: 2.6rem;
+  @include mq(medium) {
+    min-width: 0;
+    font-size: 1.5em;
   }
 }
 .logo__yellow {
@@ -94,11 +95,12 @@ header {
 .call {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-left: 3.5rem;
+  // align-items: center;
+  width: 100%;
+  margin-left: 0.5em;
   cursor: pointer;
-  @media (min-width: 319px) {
-    margin-right: 0.9rem;
+  @include mq(xxsmall) {
+    margin-right: 0.9em;
   }
 }
 .call-wrapper {
@@ -107,37 +109,52 @@ header {
   text-align: center;
 }
 .call-number {
-  font-size: 2.4rem;
+  font-size: 0.6em;
   font-weight: 700;
   color: $yellow;
-  @media (min-width: 319px) {
-    font-size: 0.7rem;
+  @include mq(xsmall) {
+    font-size: 0.8em;
   }
-  @media (min-width: 768px) {
-    font-size: 1.6rem;
+
+  @include mq(medium) {
+    font-size: 0.9em;
+  }
+  @include mq(large) {
+    font-size: 1em;
   }
 }
 .call-text {
-  font-size: 1rem;
-  @media (min-width: 319px) {
-    font-size: 0.6rem;
+  font-size: 0.4em;
+  @include mq(small) {
+    font-size: 0.6em;
   }
-  @media (min-width: 768px) {
-    font-size: 0.9rem;
+  @include mq(medium) {
+    font-size: 0.8em;
+  }
+  @include mq(large) {
+    font-size: 0.9em;
   }
 }
 .call-phone {
-  margin-right: 1.2rem;
-  @media (min-width: 319px) {
-    margin-right: 1.2rem;
+  margin-right: 0.5em;
+  margin-bottom: 1em;
+  @include mq(xsmall) {
+    margin-right: 0.8em;
+  }
+  @include mq(medium) {
+    margin-right: 0.9em;
   }
 }
 .call-phone-img {
-  height: 36px;
-  width: 36px;
-  @media (min-width: 319px) {
+  height: 15px;
+  width: 15px;
+  @include mq(xsmall) {
     height: 25px;
     width: 25px;
+  }
+  @include mq(large) {
+    height: 35px;
+    width: 35px;
   }
 }
 a {
