@@ -1,12 +1,12 @@
 <template>
   <b-navbar toggleable="lg" type="dark">
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-navbar-toggle target="nav-collapse" />
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item v-for="item of items" :key="item.link" :href="item.link">{{
-          item.text
-        }}</b-nav-item>
+        <b-nav-item v-for="item of items" :key="item.link" :href="item.link">
+          {{ item.text }}
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -32,7 +32,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/main.scss';
+.navbar {
+  height: 80px;
+}
 .nav-item {
-  padding: 20px 0;
+  padding: 10px 0;
+  color: $white;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+  &:hover {
+    border-bottom: 2px solid $yellow;
+    
+  }
+}
+
+.nav-link {
+  color: $white !important;
+  font-size: 1em;
+  text-transform: uppercase;
 }
 </style>

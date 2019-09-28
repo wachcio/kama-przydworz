@@ -1,24 +1,45 @@
 module.exports = {
   root: true,
+  parserOptions: {
+    parser: 'babel-eslint',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
   env: {
-    browser: true,
+    es6: true,
     node: true
   },
-  parserOptions: {
-    parser: 'babel-eslint'
-  },
   extends: [
-    '@nuxtjs',
+    'standard',
+    'plugin:vue/recommended',
     'prettier',
-    'prettier/vue',
-    'plugin:prettier/recommended',
-    'plugin:nuxt/recommended'
+    'prettier/standard',
+    'prettier/vue'
   ],
-  plugins: [
-    'prettier'
-  ],
-  // add your custom rules here
+  plugins: ['standard', 'vue', 'prettier'],
   rules: {
-    'nuxt/no-cjs-in-config': 'off'
+    'prettier/prettier': [
+      'error',
+      {
+        htmlWhitespaceSensitivity: 'ignore',
+        semi: false,
+        singleQuote: true
+      }
+    ],
+    'vue/html-self-closing': [
+      'error',
+      {
+        html: {
+          void: 'any'
+        }
+      }
+    ],
+    'vue/no-use-v-if-with-v-for': ['off'],
+    'vue/component-name-in-template-casing': ['off'],
+    'vue/no-unused-components': ['off'],
+    eqeqeq: ['off'],
+    'no-new': ['off']
   }
 }

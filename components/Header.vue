@@ -4,16 +4,17 @@
       <b-col class="header-col">
         <div class="logo">
           <p>
-            kama<span class="logo__yellow">-</span>przydwórz<span
-              class="logo__yellow"
-              >.</span
-            >pl
+            kama
+            <span class="logo__yellow">-</span>
+            przydwórz
+            <span class="logo__yellow">.</span>
+            pl
           </p>
         </div>
         <a :href="`tel:${phoneNumber}`">
           <div class="call">
             <div class="call-phone">
-              <img src="@/assets/img/vaadin-phone-landline.svg" alt srcset />
+              <img src="@/assets/img/phone.svg" alt srcset />
             </div>
             <div class="call-wrapper">
               <div class="call-number">{{ phoneNumber }}</div>
@@ -22,8 +23,11 @@
             </div>
           </div>
         </a>
+
+        <div class="justify-content-start">
+          <Nav />
+        </div>
       </b-col>
-      <b-col class="header-col justify-content-end"><Nav /></b-col>
     </b-row>
   </header>
 </template>
