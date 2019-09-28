@@ -36,6 +36,7 @@ export default {
   width: 100%;
   padding-right: 1em;
   justify-content: flex-end;
+  z-index: 99;
   // align-self: flex-end;
 }
 .nav-item {
