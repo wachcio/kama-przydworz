@@ -1,7 +1,7 @@
 <template>
   <header>
-    <b-row>
-      <b-col class="header-col">
+    <div class="header">
+      <div>
         <div class="logo">
           <p>
             kama
@@ -23,12 +23,11 @@
             </div>
           </div>
         </a>
-
-        <div class="justify-content-start">
-          <Nav />
-        </div>
-      </b-col>
-    </b-row>
+      </div>
+      <div class="nav justify-content-end">
+        <Nav />
+      </div>
+    </div>
   </header>
 </template>
 
@@ -56,17 +55,19 @@ export default {
 header {
   background-color: $black;
   color: $white;
-  height: 107px;
-  //   display: flex;
-  //   flex-direction: row;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
   //   align-items: center;
   //   flex-basis: 50;
 }
-.header-col {
-  height: 107px;
+.header {
+  // height: 107px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
   min-width: 465px;
 }
 .logo {
