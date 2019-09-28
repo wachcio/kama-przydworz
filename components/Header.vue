@@ -69,7 +69,7 @@ header {
   align-items: flex-start;
   background-color: $black;
   width: 100%;
-  min-width: 465px;
+  // min-width: 465px;
   &__left {
     padding-left: 1em;
   }
@@ -80,11 +80,11 @@ header {
   text-transform: uppercase;
   font-size: 3rem;
   min-width: 419px;
-  @media (max-width: 320px) {
+  @media (min-width: 319px) {
     min-width: 0;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
-  @media (max-width: 850px) {
+  @media (min-width: 850px) {
     font-size: 2.6rem;
   }
 }
@@ -97,8 +97,8 @@ header {
   align-items: center;
   margin-left: 3.5rem;
   cursor: pointer;
-  @media (max-width: 320px) {
-    margin-right: 1.2rem;
+  @media (min-width: 319px) {
+    margin-right: 0.9rem;
   }
 }
 .call-wrapper {
@@ -110,23 +110,32 @@ header {
   font-size: 2.4rem;
   font-weight: 700;
   color: $yellow;
-  @media (max-width: 320px) {
+  @media (min-width: 319px) {
+    font-size: 0.7rem;
+  }
+  @media (min-width: 768px) {
     font-size: 1.6rem;
   }
 }
 .call-text {
   font-size: 1rem;
+  @media (min-width: 319px) {
+    font-size: 0.6rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 0.9rem;
+  }
 }
 .call-phone {
   margin-right: 1.2rem;
-  @media (max-width: 320px) {
+  @media (min-width: 319px) {
     margin-right: 1.2rem;
   }
 }
 .call-phone-img {
   height: 36px;
   width: 36px;
-  @media (max-width: 320px) {
+  @media (min-width: 319px) {
     height: 25px;
     width: 25px;
   }

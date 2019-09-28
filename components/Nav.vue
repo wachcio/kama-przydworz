@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" type="dark">
+  <b-navbar toggleable="sm" type="dark">
     <b-navbar-toggle target="nav-collapse" />
 
     <b-collapse id="nav-collapse" is-nav>
@@ -32,12 +32,15 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/main.scss';
 .navbar {
-  height: 80px;
+  // height: 80px;
   width: 100%;
   padding-right: 1em;
   justify-content: flex-end;
   z-index: 99;
   // align-self: flex-end;
+  @media (min-width: 320px) {
+    padding-right: 0.2em;
+  }
 }
 .nav-item {
   padding: 10px 0;
@@ -56,9 +59,13 @@ export default {
   color: $white !important;
   font-size: 1em;
   // text-transform: uppercase;
+  @media (min-width: 319px) {
+    padding-right: 0.6em;
+    font-size: 0.6em;
+  }
 }
 .navbar-collapse {
-  @media (max-width: 991px) {
+  @media (max-width: 575px) {
     background-color: #111;
   }
 }

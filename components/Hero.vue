@@ -64,7 +64,7 @@ export default {
           img: 'dry-leaves-fallen-leaves-fungus.jpg',
           caption: 'Grzyby',
           text:
-            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, ipsa quo! Nulla, '
+            'Lorem ipsum dolor sit, amet consectetur adggipisicing elit. Blanditiis, ipsa quo! Nulla, '
         },
         {
           img: 'depth-of-field-fungus-green.jpg',
@@ -83,8 +83,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 #carousel-hero {
   width: 100% !important;
+
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.5em;
+  }
 }
 </style>
