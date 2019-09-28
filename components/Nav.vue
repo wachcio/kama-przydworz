@@ -35,6 +35,7 @@ export default {
   height: 80px;
   width: 100%;
   padding-right: 1em;
+  justify-content: flex-end;
   // align-self: flex-end;
 }
 .nav-item {
@@ -42,7 +43,10 @@ export default {
   color: $white;
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.2s;
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus,
+  &:target {
     border-bottom: 2px solid $yellow;
   }
 }
@@ -51,5 +55,14 @@ export default {
   color: $white !important;
   font-size: 1em;
   // text-transform: uppercase;
+}
+.navbar-collapse {
+  @media (max-width: 991px) {
+    background-color: #111;
+  }
+}
+.navbar-nav {
+  align-items: center;
+  justify-content: flex-end;
 }
 </style>

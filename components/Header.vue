@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header">
-      <div>
+      <div class="header__left">
         <div class="logo">
           <p>
             kama
@@ -14,7 +14,7 @@
         <a :href="`tel:${phoneNumber}`">
           <div class="call">
             <div class="call-phone">
-              <img src="@/assets/img/phone.svg" alt srcset />
+              <img class="call-phone-img" src="@/assets/img/phone.svg" alt srcset />
             </div>
             <div class="call-wrapper">
               <div class="call-number">{{ phoneNumber }}</div>
@@ -24,7 +24,7 @@
           </div>
         </a>
       </div>
-      <div class="nav justify-content-end">
+      <div class="nav justify-content-end align-items-end">
         <Nav />
       </div>
     </div>
@@ -67,15 +67,26 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: $black;
   width: 100%;
   min-width: 465px;
+  &__left {
+    padding-left: 1em;
+  }
 }
 .logo {
   //   font-family: 'Lato', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 3.6rem;
+  font-size: 3rem;
   min-width: 419px;
+  @media (max-width: 320px) {
+    min-width: 0;
+    font-size: 1.6rem;
+  }
+  @media (max-width: 850px) {
+    font-size: 2.6rem;
+  }
 }
 .logo__yellow {
   color: $yellow !important;
@@ -86,6 +97,9 @@ header {
   align-items: center;
   margin-left: 3.5rem;
   cursor: pointer;
+  @media (max-width: 320px) {
+    margin-right: 1.2rem;
+  }
 }
 .call-wrapper {
   display: flex;
@@ -96,14 +110,26 @@ header {
   font-size: 2.4rem;
   font-weight: 700;
   color: $yellow;
+  @media (max-width: 320px) {
+    font-size: 1.6rem;
+  }
 }
 .call-text {
   font-size: 1rem;
 }
 .call-phone {
+  margin-right: 1.2rem;
+  @media (max-width: 320px) {
+    margin-right: 1.2rem;
+  }
+}
+.call-phone-img {
   height: 36px;
   width: 36px;
-  margin-right: 1.2rem;
+  @media (max-width: 320px) {
+    height: 25px;
+    width: 25px;
+  }
 }
 a {
   text-decoration: none;
