@@ -14,7 +14,12 @@
         <a :href="`tel:${phoneNumber}`">
           <div class="call">
             <div class="call-phone">
-              <img class="call-phone-img" src="~/assets/img/phone.svg" alt srcset />
+              <img
+                class="call-phone-img"
+                src="~/assets/img/phone.svg"
+                alt
+                srcset
+              />
             </div>
             <div class="call-wrapper">
               <div class="call-number">{{ phoneNumber }}</div>
@@ -82,11 +87,11 @@ header {
   // min-width: 419px;
   @include mq(xsmall) {
     min-width: 0;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   @include mq(medium) {
     min-width: 0;
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 }
 .logo__yellow {
