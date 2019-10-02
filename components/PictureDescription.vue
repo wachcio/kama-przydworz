@@ -1,7 +1,11 @@
 <template>
   <div class="content" :style="checkReverse()">
-    <div class="content__picture">
-      <img :src="require(`@/assets/img/houses/${img}`)" />
+    <div class="content__picture" @click="modalShowHide()">
+      <img :src="require(`@/assets/img/${path}${img}`)" />
+      <div class="content__picture--modal" v-if="modal" :style="modalStyle">
+        <img :src="require(`@/assets/img/${path}${img}`)" />
+        <div class="x">X</div>
+      </div>
     </div>
     <div class="content__description">
       <p>{{description}}</p>
@@ -12,10 +16,11 @@
 <script>
 export default {
   name: 'PictureDescription',
-  props: { img: String, description: String, reverse: Number },
+  props: { path: String, img: String, description: String, reverse: Number },
   data() {
     return {
-      windowWidth: null
+      windowWidth: null,
+      modal: false
     }
   },
   components: {},
@@ -38,9 +43,16 @@ export default {
           ? { flexDirection: 'row' }
           : { flexDirection: 'row-reverse' }
       }
+    },
+    modalShowHide() {
+      this.modal = !this.modal
     }
   },
-  computed: {},
+  computed: {
+    modalStyle() {
+      return this.modal ? { display: 'block' } : { display: 'none' }
+    }
+  },
   created() {},
   watch: {}
 }
@@ -68,13 +80,14 @@ export default {
     font-size: 1em;
   }
   @include mq(xlarge) {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 
   &__picture {
+    cursor: pointer;
     padding: 0.5em 1em;
     @include mq(xsmall) {
-      fpadding: 0.6em 1.1em;
+      padding: 0.6em 1.1em;
     }
     @include mq(small) {
       padding: 0.7em 1.3em;
@@ -92,11 +105,50 @@ export default {
       width: 100%;
       box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
     }
+    &--modal {
+      display: none;
+      position: fixed;
+      //   position: absolute;
+      left: 0;
+      top: 0;
+      //   text-align: center;
+      width: 100vw;
+      height: 100vh;
+      z-index: 999;
+      background-color: rgba(0, 0, 0, 0.95);
+      & img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1000;
+        width: 90%;
+        height: auto;
+        transform: translate(-50%, -50%);
+      }
+      & .x {
+        position: absolute;
+        z-index: 1001;
+        width: 1.5em;
+        height: 1.5em;
+        background-color: rgba(0, 0, 0, 0.75);
+        right: 2em;
+        top: 2em;
+        color: gray;
+        font-size: 1.5em;
+        text-align: center;
+        line-height: 1.5em;
+        transition: 0.3s color;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
   }
   &__description {
     padding: 0.5em 1em;
+    text-align: justify;
     @include mq(xsmall) {
-      fpadding: 0.6em 1.1em;
+      padding: 0.6em 1.1em;
     }
     @include mq(small) {
       padding: 0.7em 1.3em;

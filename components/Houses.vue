@@ -5,6 +5,7 @@
       <PictureDescription
         v-for="(item, index) in content"
         :key="item.img"
+        path="houses/"
         :img="item.img"
         :description="item.text"
         :reverse="index%2"
