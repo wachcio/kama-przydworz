@@ -9,7 +9,20 @@
         </div>
       </div>
       <div class="map">
-        <img src="@/assets/img/resort/mapLegend/map.svg" class="map__img" />
+        <img
+          src="@/assets/img/resort/mapLegend/map.svg"
+          class="map__img"
+          @click="mapFullSizeShowHide()"
+        />
+        <div
+          class="map__full-size"
+          v-if="mapFullSize"
+          :style="fullSizeStyle"
+          @click="mapFullSizeShowHide()"
+        >
+          <img src="@/assets/img/resort/mapLegend/map.svg" />
+          <div class="x">X</div>
+        </div>
       </div>
     </div>
   </section>
@@ -22,6 +35,7 @@ export default {
   props: {},
   data() {
     return {
+      mapFullSize: false,
       legend_items: [
         { source: 'our_houses', description: 'nasze domki' },
         { source: 'playground', description: 'plac zabaw' },
@@ -53,10 +67,18 @@ export default {
       ]
     }
   },
-  computed: {},
+  computed: {
+    fullSizeStyle() {
+      return this.mapFullSize ? { display: 'block' } : { display: 'none' }
+    }
+  },
   watch: {},
   created() {},
-  methods: {}
+  methods: {
+    mapFullSizeShowHide() {
+      this.mapFullSize = !this.mapFullSize
+    }
+  }
 }
 </script>
 
@@ -124,6 +146,45 @@ export default {
   &__img {
     width: 100%;
     box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  &__full-size {
+    display: none;
+    position: fixed;
+    //   position: absolute;
+    left: 0;
+    top: 0;
+    //   text-align: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.95);
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1000;
+      width: auto;
+      height: 90%;
+      transform: translate(-50%, -50%);
+    }
+    & .x {
+      position: absolute;
+      z-index: 1001;
+      width: 1.5em;
+      height: 1.5em;
+      background-color: rgba(0, 0, 0, 0.75);
+      right: 2em;
+      top: 2em;
+      color: gray;
+      font-size: 1.5em;
+      text-align: center;
+      line-height: 1.5em;
+      transition: 0.3s color;
+      &:hover {
+        color: $white;
+      }
+    }
   }
 }
 </style>
