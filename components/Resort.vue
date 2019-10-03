@@ -8,16 +8,19 @@
         path="resort/"
         :img="item.img"
         :description="item.text"
-        :reverse="index%2"
+        :reverse="index % 2"
       />
     </div>
+    <MapLegend />
   </section>
 </template>
 
 <script>
 import PictureDescription from '@/components/PictureDescription.vue'
+import MapLegend from '@/components/MapLegend.vue'
 export default {
   name: 'Resort',
+  components: { PictureDescription, MapLegend },
   props: {},
   data() {
     return {
@@ -50,11 +53,10 @@ export default {
       ]
     }
   },
-  components: { PictureDescription },
-  methods: {},
   computed: {},
+  watch: {},
   created() {},
-  watch: {}
+  methods: {}
 }
 </script>
 

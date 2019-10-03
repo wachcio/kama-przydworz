@@ -8,7 +8,7 @@
         path="houses/"
         :img="item.img"
         :description="item.text"
-        :reverse="index%2"
+        :reverse="index % 2"
       />
     </div>
   </section>
@@ -18,6 +18,7 @@
 import PictureDescription from '@/components/PictureDescription.vue'
 export default {
   name: 'Houses',
+  components: { PictureDescription },
   props: {},
   data() {
     return {
@@ -45,11 +46,10 @@ export default {
       ]
     }
   },
-  components: { PictureDescription },
-  methods: {},
   computed: {},
+  watch: {},
   created() {},
-  watch: {}
+  methods: {}
 }
 </script>
 

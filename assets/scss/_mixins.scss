@@ -8,3 +8,22 @@
     @error '"#{$breakpoint}" -Nie rozpoznaję tej wielkości';
   }
 }
+
+@mixin pictureAndDescription() {
+  padding: 0.5em 1em;
+  @include mq(xsmall) {
+    padding: 0.6em 1.1em;
+  }
+  @include mq(small) {
+    padding: 0.7em 1.3em;
+  }
+  @include mq(medium) {
+    width: 50%;
+  }
+  @include mq(large) {
+    padding: 0.8em 1.5em;
+  }
+  @include mq(xlarge) {
+    padding: 1em 1.9em;
+  }
+}

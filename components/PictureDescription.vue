@@ -2,13 +2,13 @@
   <div class="content" :style="checkReverse()">
     <div class="content__picture" @click="modalShowHide()">
       <img :src="require(`@/assets/img/${path}${img}`)" />
-      <div class="content__picture--modal" v-if="modal" :style="modalStyle">
+      <div v-if="modal" class="content__picture--modal" :style="modalStyle">
         <img :src="require(`@/assets/img/${path}${img}`)" />
         <div class="x">X</div>
       </div>
     </div>
     <div class="content__description">
-      <p>{{description}}</p>
+      <p>{{ description }}</p>
     </div>
   </div>
 </template>
@@ -16,6 +16,7 @@
 <script>
 export default {
   name: 'PictureDescription',
+  components: {},
   props: { path: String, img: String, description: String, reverse: Number },
   data() {
     return {
@@ -23,7 +24,12 @@ export default {
       modal: false
     }
   },
-  components: {},
+  computed: {
+    modalStyle() {
+      return this.modal ? { display: 'block' } : { display: 'none' }
+    }
+  },
+  watch: {},
   mounted() {
     window.addEventListener('resize', this.handleResize)
     this.handleResize()
@@ -31,6 +37,7 @@ export default {
   destroyed() {
     window.removeEventListener('resize', this.handleResize)
   },
+  created() {},
   methods: {
     handleResize() {
       this.windowWidth = window.innerWidth
@@ -47,14 +54,7 @@ export default {
     modalShowHide() {
       this.modal = !this.modal
     }
-  },
-  computed: {
-    modalStyle() {
-      return this.modal ? { display: 'block' } : { display: 'none' }
-    }
-  },
-  created() {},
-  watch: {}
+  }
 }
 </script>
 
@@ -85,22 +85,7 @@ export default {
 
   &__picture {
     cursor: pointer;
-    padding: 0.5em 1em;
-    @include mq(xsmall) {
-      padding: 0.6em 1.1em;
-    }
-    @include mq(small) {
-      padding: 0.7em 1.3em;
-    }
-    @include mq(medium) {
-      width: 50%;
-    }
-    @include mq(large) {
-      padding: 0.8em 1.5em;
-    }
-    @include mq(xlarge) {
-      padding: 1em 1.9em;
-    }
+    @include pictureAndDescription();
     & img {
       width: 100%;
       box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
@@ -147,21 +132,7 @@ export default {
   &__description {
     padding: 0.5em 1em;
     text-align: justify;
-    @include mq(xsmall) {
-      padding: 0.6em 1.1em;
-    }
-    @include mq(small) {
-      padding: 0.7em 1.3em;
-    }
-    @include mq(medium) {
-      width: 50%;
-    }
-    @include mq(large) {
-      padding: 0.8em 1.5em;
-    }
-    @include mq(xlarge) {
-      padding: 1em 1.9em;
-    }
+    @include pictureAndDescription();
   }
 }
 </style>
