@@ -2,12 +2,6 @@
   <section class="map-legend">
     <h2>Plan ośrodka</h2>
     <div class="map-legend__container">
-      <div class="legend">
-        <div class="legend__item" v-for="item in legend_items" :key="item.source">
-          <img :src="require(`@/assets/img/resort/mapLegend/${item.source}.svg`)" alt />
-          <p>{{item.description}}</p>
-        </div>
-      </div>
       <div class="map">
         <img
           src="@/assets/img/resort/mapLegend/map.svg"
@@ -15,13 +9,26 @@
           @click="mapFullSizeShowHide()"
         />
         <div
-          class="map__full-size"
           v-if="mapFullSize"
+          class="map__full-size"
           :style="fullSizeStyle"
           @click="mapFullSizeShowHide()"
         >
           <img src="@/assets/img/resort/mapLegend/map.svg" />
           <div class="x">X</div>
+        </div>
+      </div>
+      <div class="legend">
+        <div
+          v-for="item in legend_items"
+          :key="item.source"
+          class="legend__item"
+        >
+          <img
+            :src="require(`@/assets/img/resort/mapLegend/${item.source}.svg`)"
+            alt
+          />
+          <p>{{ item.description }}</p>
         </div>
       </div>
     </div>
