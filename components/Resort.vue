@@ -63,12 +63,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/main.scss';
 .resort {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $gray;
-  color: $white;
+  @include graySection();
   h1 {
     font-size: 1em;
     font-weight: bold;

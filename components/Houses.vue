@@ -56,12 +56,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/main.scss';
 .houses {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $yellow;
-  color: $black;
+  @include yellowSection();
   h1 {
     font-size: 1em;
     font-weight: bold;
