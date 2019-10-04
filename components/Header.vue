@@ -14,12 +14,7 @@
         <a :href="`tel:${phoneNumber}`">
           <div class="call">
             <div class="call-phone">
-              <img
-                class="call-phone-img"
-                src="~/assets/img/phone.svg"
-                alt
-                srcset
-              />
+              <img class="call-phone-img" src="~/assets/img/phone.svg" alt srcset />
             </div>
             <div class="call-wrapper">
               <div class="call-number">{{ phoneNumber }}</div>
@@ -44,7 +39,7 @@ export default {
   components: { Nav },
   data() {
     return {
-      phoneNumber: '+48 123 456 789'
+      phoneNumber: '+48 787 784 556'
     }
   },
   computed: {
