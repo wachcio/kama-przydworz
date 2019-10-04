@@ -76,7 +76,14 @@ export default {
      ** You can extend webpack config here
      */
 
-    extend(config, ctx) {},
+    extend(config, { isDev, isClient }) {
+      config.module.rules.push({
+        enforce: 'pre',
+        test: /\.txt$/,
+        loader: 'raw-loader',
+        exclude: /(node_modules)/
+      })
+    },
     extractCSS: true
   }
 }

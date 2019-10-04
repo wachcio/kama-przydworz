@@ -6,14 +6,18 @@
         <img src="~/assets/img/map/map_street_map.png" alt />
       </div>
       <div class="map__description">
-        <p>Nasze domki znajdują się w miejscowości Przydwórz niedaleko Wąbrzeźna. Dokładna lokalizacja GPS to N 53.263331 i E 18.812688</p>
+        <p>
+          Nasze domki znajdują się w miejscowości Przydwórz niedaleko Wąbrzeźna.
+          Dokładna lokalizacja GPS to N 53.263331 i E 18.812688
+        </p>
 
         <a
           href="https://www.google.pl/maps/dir//53.263331,+18.812688/@53.2623893,18.7781456"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="~/assets/img/map/google_maps.svg" alt />Wyznacz trasę z Google Maps
+          <img src="~/assets/img/map/google_maps.svg" alt />
+          Wyznacz trasę z Google Maps
         </a>
         <br />
 
@@ -22,7 +26,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="~/assets/img/map/targeo.svg" alt />Wyznacz trasę z Tagreo
+          <img src="~/assets/img/map/targeo.svg" alt />
+          Wyznacz trasę z Tagreo
         </a>
         <br />
 
@@ -31,7 +36,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="~/assets/img/map/open_street_map.png" alt />Wyznacz trasę z OpenStreetMap
+          <img src="~/assets/img/map/open_street_map.png" alt />
+          Wyznacz trasę z OpenStreetMap
         </a>
       </div>
     </div>
@@ -41,15 +47,15 @@
 <script>
 export default {
   name: 'AccesToUs',
+  components: {},
   props: {},
   data() {
     return {}
   },
-  components: {},
-  methods: {},
   computed: {},
+  watch: {},
   created() {},
-  watch: {}
+  methods: {}
 }
 </script>
 

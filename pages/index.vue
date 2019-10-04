@@ -6,6 +6,7 @@
       <Houses />
       <Resort />
       <AccessToUs />
+      <Regulations />
     </b-container>
   </b-container>
 </template>
@@ -16,9 +17,10 @@ import Hero from '@/components/Hero.vue'
 import Houses from '@/components/Houses.vue'
 import Resort from '@/components/Resort.vue'
 import AccessToUs from '@/components/AccesToUs.vue'
+import Regulations from '@/components/Regulations.vue'
 
 export default {
   name: 'App',
-  components: { Header, Hero, Houses, Resort, AccessToUs }
+  components: { Header, Hero, Houses, Resort, AccessToUs, Regulations }
 }
 </script>
