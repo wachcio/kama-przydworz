@@ -91,7 +91,7 @@ export default {
       box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
       transition: 0.1s transform;
       &:hover {
-        transform: scale(1.1) rotate(1deg);
+        transform: scale(1.03) rotate(1deg);
       }
     }
 

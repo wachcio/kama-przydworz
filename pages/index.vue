@@ -8,6 +8,7 @@
       <AccessToUs />
       <Regulations />
       <Contact />
+      <footer>Wachcio 2019</footer>
     </b-container>
   </b-container>
 </template>
@@ -26,3 +27,21 @@ export default {
   components: { Header, Hero, Houses, Resort, AccessToUs, Regulations, Contact }
 }
 </script>
+
+<style lang="scss" >
+@import '@/assets/scss/main.scss';
+
+footer {
+  width: 100%;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 0;
+  background-color: black;
+  color: $white;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+</style>

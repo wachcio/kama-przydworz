@@ -36,6 +36,37 @@ export default {
 .regulations {
   @include graySection();
   text-align: justify;
+  @include mq(xsmall) {
+    font-size: 0.5em;
+  }
+  @include mq(small) {
+    font-size: 0.7em;
+  }
+
+  @include mq(large) {
+    font-size: 1em;
+  }
+  @include mq(xlarge) {
+    font-size: 1.1em;
+  }
+  h1 {
+    @include mq(medium) {
+      padding: 0.7em;
+      font-size: 1.4em;
+    }
+    @include mq(large) {
+      padding: 0.8em;
+      font-size: 1.6em;
+    }
+    @include mq(medium) {
+      padding: 0.7em;
+      font-size: 1.4em;
+    }
+    @include mq(xxlarge) {
+      padding: 1em;
+      font-size: 1.7em;
+    }
+  }
   ol {
     padding: 0 3em;
   }

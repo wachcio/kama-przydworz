@@ -56,6 +56,25 @@ export default {
     font-size: 1.1em;
   }
 
+  & h1 {
+    @include mq(medium) {
+      padding: 0.7em;
+      font-size: 1.4em;
+    }
+    @include mq(large) {
+      padding: 0.8em;
+      font-size: 1.6em;
+    }
+    @include mq(medium) {
+      padding: 0.7em;
+      font-size: 1.4em;
+    }
+    @include mq(xxlarge) {
+      padding: 1em;
+      font-size: 1.7em;
+    }
+  }
+
   &__container {
     width: 100%;
     display: flex;
