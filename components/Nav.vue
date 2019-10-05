@@ -4,9 +4,7 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item v-for="item of items" :key="item.link" :href="item.link">
-          {{ item.text }}
-        </b-nav-item>
+        <b-nav-item v-for="item of items" :key="item.link" :href="item.link">{{ item.text }}</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -19,12 +17,12 @@ export default {
   data() {
     return {
       items: [
-        { text: 'Domki', link: '#domki' },
-        { text: 'Galeria', link: '#galeria' },
-        { text: 'Ośrodek', link: '#osrodek' },
-        { text: 'Dojazd', link: '#dojazd' },
-        { text: 'Regulamin', link: '#regulamin' },
-        { text: 'Kontakt', link: '#kontakt' }
+        { text: 'Domki', link: '#houses' },
+        // { text: 'Galeria', link: '#galeria' },
+        { text: 'Ośrodek', link: '#resort' },
+        { text: 'Dojazd', link: '#access-to-us' },
+        { text: 'Regulamin', link: '#regulations' },
+        { text: 'Kontakt', link: '#contact' }
       ]
     }
   }

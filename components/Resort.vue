@@ -1,5 +1,5 @@
 <template>
-  <section class="resort">
+  <section class="resort" id="resort">
     <H1>Ośrodek wypoczynkowy Przydwórz</H1>
     <div class="resort__content">
       <PictureDescription

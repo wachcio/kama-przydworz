@@ -1,5 +1,5 @@
 <template>
-  <section class="contact">
+  <section class="contact" id="contact">
     <h1>Kontakt</h1>
     <div class="contact__container">
       <div class="contact__picture">
@@ -8,9 +8,12 @@
       <div class="contact__description">
         <p>Głównym kontaktem do nas jest telefon.</p>
         <a class="contact__description--phone-number" :href="`tel:${phoneNumber}`">
-          <p>{{phoneNumber}}</p>
+          <p>{{ phoneNumber }}</p>
         </a>
-        <p>Tutaj zawsze uzyskasz najpewniejsze i najświeższe informacje na każdy temat związany z domkami, kosztami czy terminami najmu.</p>
+        <p>
+          Tutaj zawsze uzyskasz najpewniejsze i najświeższe informacje na każdy
+          temat związany z domkami, kosztami czy terminami najmu.
+        </p>
       </div>
     </div>
   </section>
@@ -19,17 +22,17 @@
 <script>
 export default {
   name: 'Contact',
+  components: {},
   props: {},
   data() {
     return {
       phoneNumber: '+48 787 784 556'
     }
   },
-  components: {},
-  methods: {},
   computed: {},
+  watch: {},
   created() {},
-  watch: {}
+  methods: {}
 }
 </script>
 

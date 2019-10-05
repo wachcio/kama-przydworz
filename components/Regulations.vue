@@ -1,8 +1,8 @@
 <template>
-  <section class="regulations">
+  <section class="regulations" id="regulations">
     <h1>Regulamin domków</h1>
     <ol>
-      <li v-for="(item, index) in regulationText" :key="index" v-if="item">{{item}}</li>
+      <li v-for="(item, index) in regulationText" v-if="item" :key="index">{{ item }}</li>
     </ol>
   </section>
 </template>

@@ -86,7 +86,7 @@ export default {
   &__picture {
     cursor: pointer;
     @include pictureAndDescription();
-    & img {
+    & > img {
       width: 100%;
       box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
       transition: 0.1s transform;
