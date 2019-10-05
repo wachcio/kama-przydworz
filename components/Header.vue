@@ -14,12 +14,7 @@
         <a :href="`tel:${phoneNumber}`">
           <div class="call">
             <div class="call-phone">
-              <img
-                class="call-phone-img"
-                src="~/assets/img/phone.svg"
-                alt
-                srcset
-              />
+              <img class="call-phone-img" src="~/assets/img/phone.svg" alt srcset />
             </div>
             <div class="call-wrapper">
               <div class="call-number">{{ phoneNumber }}</div>
@@ -68,6 +63,7 @@ header {
 }
 .header {
   // height: 107px;
+  // position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

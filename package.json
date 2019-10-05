@@ -19,7 +19,8 @@
     "image-webpack-loader": "^6.0.0",
     "node-sass": "^4.12.0",
     "nuxt": "^2.0.0",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^8.0.0",
+    "vue-scrollto": "^2.17.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",

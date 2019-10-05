@@ -1,5 +1,5 @@
 <template>
-  <section class="access-to-us" id="access-to-us">
+  <section id="access-to-us" class="access-to-us">
     <h1>Jak dojechać do nas</h1>
     <div class="map">
       <div class="map__picture">

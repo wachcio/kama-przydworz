@@ -1,5 +1,5 @@
 <template>
-  <section class="contact" id="contact">
+  <section id="contact" class="contact">
     <h1>Kontakt</h1>
     <div class="contact__container">
       <div class="contact__picture">
@@ -7,7 +7,10 @@
       </div>
       <div class="contact__description">
         <p>Głównym kontaktem do nas jest telefon.</p>
-        <a class="contact__description--phone-number" :href="`tel:${phoneNumber}`">
+        <a
+          class="contact__description--phone-number"
+          :href="`tel:${phoneNumber}`"
+        >
           <p>{{ phoneNumber }}</p>
         </a>
         <p>

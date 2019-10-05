@@ -1,5 +1,5 @@
 <template>
-  <section class="houses" id="houses">
+  <section id="houses" class="houses">
     <H1>Nasze domki</H1>
     <div class="houses__content">
       <PictureDescription
