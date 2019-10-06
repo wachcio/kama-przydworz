@@ -45,7 +45,7 @@ export default {
       //   this.window.height = window.innerHeight
     },
     checkReverse() {
-      if (this.windowWidth > 767) {
+      if (this.windowWidth > 576) {
         return this.reverse
           ? { flexDirection: 'row' }
           : { flexDirection: 'row-reverse' }
@@ -65,23 +65,24 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.4em;
-  @include mq(xsmall) {
-    font-size: 0.5em;
-  }
-  @include mq(small) {
-    font-size: 0.7em;
-  }
-  @include mq(medium) {
-    flex-direction: row;
-    align-items: center;
-  }
-  @include mq(large) {
-    font-size: 1em;
-  }
-  @include mq(xlarge) {
-    font-size: 1.1em;
-  }
+  @include flexColumn();
+  //   font-size: 0.4em;
+  //   @include mq(xsmall) {
+  //     font-size: 0.5em;
+  //   }
+  //   @include mq(small) {
+  //     font-size: 0.7em;
+  //   }
+  //   @include mq(medium) {
+  //     flex-direction: row;
+  //     align-items: center;
+  //   }
+  //   @include mq(large) {
+  //     font-size: 1em;
+  //   }
+  //   @include mq(xlarge) {
+  //     font-size: 1.1em;
+  //   }
 
   &__picture {
     cursor: pointer;

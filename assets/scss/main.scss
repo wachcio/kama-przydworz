@@ -14,28 +14,84 @@
   margin: 0;
   padding: 0;
 }
+html {
+  font-size: 10px;
+}
 body {
+  font-size: 1.8rem;
+  font-family: 'Lato', sans-serif !important;
+  background-color: $bgcbody;
+  width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
+}
+p,
+li {
+  font-size: 1rem;
+
+  @include mq(xxsmall) {
+    padding: 0.6rem;
+    font-size: 1.1rem;
+  }
+  @include mq(xsmall) {
+    padding: 0.7rem;
+    font-size: 1.2rem;
+  }
+  @include mq(small) {
+    padding: 0.7rem;
+    font-size: 1.4rem;
+  }
+  @include mq(medium) {
+    padding: 0.7rem;
+    font-size: 1.5rem;
+  }
+  @include mq(large) {
+    padding: 0.7rem;
+    font-size: 1.7rem;
+  }
+  @include mq(xlarge) {
+    padding: 0.7rem;
+    font-size: 1.8rem;
+  }
+  @include mq(xxlarge) {
+    padding: 0.7rem;
+    font-size: 1.9rem;
+  }
 }
 
 h1 {
-  font-size: 1em;
+  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0.5em 0;
+  padding: 0.7rem 0;
 
+  @include mq(xxsmall) {
+    padding: 0.9rem 0;
+    font-size: 1.4rem;
+  }
+  @include mq(xsmall) {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+  }
+  @include mq(small) {
+    padding: 1rem 0;
+    font-size: 1.8rem;
+  }
   @include mq(medium) {
-    padding: 0.7em;
-    font-size: 1.4em;
+    padding: 1rem 0;
+    font-size: 2rem;
   }
   @include mq(large) {
-    padding: 0.8em;
-    font-size: 1.6em;
+    padding: 1rem 0;
+    font-size: 2.2rem;
   }
-
+  @include mq(xlarge) {
+    padding: 1.3rem 0;
+    font-size: 2.4rem;
+  }
   @include mq(xxlarge) {
-    padding: 1em;
-    font-size: 1.7em;
+    padding: 1.5rem 0;
+    font-size: 2.6rem;
   }
 }
 h2 {

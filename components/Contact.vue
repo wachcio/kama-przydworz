@@ -7,10 +7,7 @@
       </div>
       <div class="contact__description">
         <p>Głównym kontaktem do nas jest telefon.</p>
-        <a
-          class="contact__description--phone-number"
-          :href="`tel:${phoneNumber}`"
-        >
+        <a class="contact__description--phone-number" :href="`tel:${phoneNumber}`">
           <p>{{ phoneNumber }}</p>
         </a>
         <p>
@@ -47,39 +44,39 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.4em;
-  @include mq(xsmall) {
-    font-size: 0.5em;
-  }
-  @include mq(small) {
-    font-size: 0.7em;
-  }
+  //   font-size: 0.4em;
+  //   @include mq(xsmall) {
+  //     font-size: 0.5em;
+  //   }
+  //   @include mq(small) {
+  //     font-size: 0.7em;
+  //   }
 
-  @include mq(large) {
-    font-size: 1em;
-  }
-  @include mq(xlarge) {
-    font-size: 1.1em;
-  }
+  //   @include mq(large) {
+  //     font-size: 1em;
+  //   }
+  //   @include mq(xlarge) {
+  //     font-size: 1.1em;
+  //   }
 
-  & h1 {
-    @include mq(medium) {
-      padding: 0.7em;
-      font-size: 1.4em;
-    }
-    @include mq(large) {
-      padding: 0.8em;
-      font-size: 1.6em;
-    }
-    @include mq(medium) {
-      padding: 0.7em;
-      font-size: 1.4em;
-    }
-    @include mq(xxlarge) {
-      padding: 1em;
-      font-size: 1.7em;
-    }
-  }
+  //   & h1 {
+  //     @include mq(medium) {
+  //       padding: 0.7em;
+  //       font-size: 1.4em;
+  //     }
+  //     @include mq(large) {
+  //       padding: 0.8em;
+  //       font-size: 1.6em;
+  //     }
+  //     @include mq(medium) {
+  //       padding: 0.7em;
+  //       font-size: 1.4em;
+  //     }
+  //     @include mq(xxlarge) {
+  //       padding: 1em;
+  //       font-size: 1.7em;
+  //     }
+  //   }
 
   &__container {
     width: 100%;

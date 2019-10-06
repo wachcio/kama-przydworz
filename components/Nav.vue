@@ -8,9 +8,11 @@
         <b-nav-item
           v-for="item of items"
           :key="item.link"
-          href="#"
           v-scroll-to="item.link"
-        >{{ item.text }}</b-nav-item>
+          href="#"
+        >
+          {{ item.text }}
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

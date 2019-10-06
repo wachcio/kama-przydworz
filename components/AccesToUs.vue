@@ -69,23 +69,24 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.4em;
-  @include mq(xsmall) {
-    font-size: 0.5em;
-  }
-  @include mq(small) {
-    font-size: 0.7em;
-  }
-  @include mq(medium) {
-    flex-direction: row-reverse;
-    align-items: center;
-  }
-  @include mq(large) {
-    font-size: 1em;
-  }
-  @include mq(xlarge) {
-    font-size: 1.1em;
-  }
+  @include flexColumn();
+  //   font-size: 0.4em;
+  //   @include mq(xsmall) {
+  //     font-size: 0.5em;
+  //   }
+  //   @include mq(small) {
+  //     font-size: 0.7em;
+  //   }
+  //   @include mq(small) {
+  //     flex-direction: row-reverse;
+  //     align-items: center;
+  //   }
+  //   @include mq(large) {
+  //     font-size: 1em;
+  //   }
+  //   @include mq(xlarge) {
+  //     font-size: 1.1em;
+  //   }
 
   &__picture {
     @include pictureAndDescription();
