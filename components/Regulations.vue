@@ -9,6 +9,11 @@
         v-html="parseDescriptionPhoneNumber(item)"
       />
     </ol>
+    <h2>DZIĘKUJEMY ZA WSPÓŁPRACĘ I ŻYCZYMY UDANEGO WYPOCZYNKU</h2>
+    <h3>Telefony alarmowe</h3>
+    <p>POGOTOWIE RATUNKOWE: 999 LUB 112</p>
+    <p>STRAŻ POŻARNA: 998 LUB 112</p>
+    <p>POLICJA: 997 LUB 112</p>
   </section>
 </template>
 
