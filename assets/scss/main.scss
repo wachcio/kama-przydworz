@@ -26,7 +26,8 @@ body {
   overflow-x: hidden;
 }
 p,
-li {
+li,
+a {
   font-size: 1rem;
 
   @include mq(xxsmall) {
@@ -35,15 +36,15 @@ li {
   }
   @include mq(xsmall) {
     padding: 0.7rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   @include mq(small) {
     padding: 0.7rem;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
   @include mq(medium) {
     padding: 0.7rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   @include mq(large) {
     padding: 0.7rem;
@@ -63,34 +64,35 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0.7rem 0;
+  padding: 0.7rem;
+  text-align: center;
 
   @include mq(xxsmall) {
-    padding: 0.9rem 0;
+    padding: 0.9rem;
     font-size: 1.4rem;
   }
   @include mq(xsmall) {
-    padding: 1rem 0;
+    padding: 1rem;
     font-size: 1.5rem;
   }
   @include mq(small) {
-    padding: 1rem 0;
+    padding: 1rem;
     font-size: 1.8rem;
   }
   @include mq(medium) {
-    padding: 1rem 0;
+    padding: 1rem;
     font-size: 2rem;
   }
   @include mq(large) {
-    padding: 1rem 0;
+    padding: 1rem;
     font-size: 2.2rem;
   }
   @include mq(xlarge) {
-    padding: 1.3rem 0;
+    padding: 1.3rem;
     font-size: 2.4rem;
   }
   @include mq(xxlarge) {
-    padding: 1.5rem 0;
+    padding: 1.5rem;
     font-size: 2.6rem;
   }
 }
@@ -98,7 +100,7 @@ h2 {
   font-size: 0.9em;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0.4em 0;
+  padding: 0.4em;
 
   @include mq(medium) {
     padding: 0.6em;

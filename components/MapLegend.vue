@@ -19,15 +19,8 @@
         </div>
       </div>
       <div class="legend">
-        <div
-          v-for="item in legend_items"
-          :key="item.source"
-          class="legend__item"
-        >
-          <img
-            :src="require(`@/assets/img/resort/mapLegend/${item.source}.svg`)"
-            alt
-          />
+        <div v-for="item in legend_items" :key="item.source" class="legend__item">
+          <img :src="require(`@/assets/img/resort/mapLegend/${item.source}.svg`)" alt />
           <p>{{ item.description }}</p>
         </div>
       </div>
@@ -97,6 +90,7 @@ export default {
   flex-direction: column;
   align-items: center;
   font-size: 0.4em;
+
   @include mq(xsmall) {
     font-size: 0.5em;
   }
@@ -115,7 +109,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include mq(medium) {
+    @include mq(small) {
       flex-direction: row;
       align-items: center;
     }
@@ -130,6 +124,10 @@ export default {
   justify-content: center;
   @include pictureAndDescription();
 
+  //   @include mq(small) {
+  //     width: 50%;
+  //   }
+  //   @include flexColumn();
   &__item {
     width: 33%;
     display: flex;
@@ -150,6 +148,7 @@ export default {
 .map {
   cursor: pointer;
   @include pictureAndDescription();
+
   &__img {
     width: 100%;
     box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);

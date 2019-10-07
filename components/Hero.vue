@@ -84,48 +84,58 @@ export default {
 
   .carousel-caption {
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 0.5em;
-    padding: 0.5em 0;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0;
+    // bottom: 0.2rem;
 
     h3 {
-      font-size: 0.5em;
+      font-size: 0.6rem;
       color: $yellow;
       font-weight: bold;
       @include mq(xsmall) {
-        font-size: 0.7em;
+        font-size: 0.8rem;
       }
       @include mq(small) {
-        font-size: 0.8em;
+        font-size: 1rem;
       }
       @include mq(large) {
-        font-size: 1em;
+        font-size: 1.2rem;
       }
       @include mq(xlarge) {
-        font-size: 1.3em;
+        font-size: 1.6rem;
       }
     }
     p {
-      font-size: 0.4em;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 0.3rem;
+      font-size: 0.4rem;
       @include mq(xsmall) {
-        font-size: 0.6em;
+        font-size: 0.6rem;
       }
       @include mq(small) {
-        font-size: 0.7em;
+        font-size: 0.7rem;
       }
       @include mq(large) {
-        font-size: 0.9em;
+        font-size: 0.9rem;
       }
       @include mq(xlarge) {
-        font-size: 1.1em;
+        font-size: 1.1rem;
       }
     }
   }
 
-  // .carousel-indicators {
-  //   width: 0.5em;
-  //   height: 0.5em;
-  //   border-radius: 50%;
-  // }
+  .carousel-indicators {
+    //   width: 0.5em;
+    //   height: 0.5em;
+    //   border-radius: 50%;
+    // height: 0.1rem;
+  }
+  ol li {
+    height: 0.2rem;
+    padding: 0;
+    margin: 0;
+  }
   ol li.active {
     background-color: $yellow;
   }
