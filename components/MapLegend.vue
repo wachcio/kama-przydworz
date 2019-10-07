@@ -109,10 +109,10 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include mq(small) {
-      flex-direction: row;
-      align-items: center;
-    }
+    // @include mq(small) {
+    //   flex-direction: row;
+    //   align-items: center;
+    // }
   }
 }
 .legend {
@@ -122,7 +122,7 @@ export default {
   width: 100%;
   align-items: center;
   justify-content: center;
-  @include pictureAndDescription();
+  //   @include pictureAndDescription();
 
   //   @include mq(small) {
   //     width: 50%;
@@ -139,8 +139,12 @@ export default {
     & img {
       width: 3em;
       height: 3em;
-      margin-left: 0.5em;
-      margin-right: 0.5em;
+      margin: 0 0.1em;
+      @include mq(small) {
+      }
+    }
+    & p {
+      font-size: 1rem;
     }
   }
 }

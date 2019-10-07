@@ -8,7 +8,10 @@
       <AccessToUs />
       <Regulations />
       <Contact />
-      <footer>Wachcio 2019</footer>
+      <footer>
+        <p>Wachcio 2019</p>
+        <p></p>
+      </footer>
     </b-container>
   </b-container>
 </template>
@@ -33,15 +36,44 @@ export default {
 
 footer {
   width: 100%;
-  height: 2em;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2em 0;
+  padding: 2rem 0;
   background-color: black;
   color: $white;
-  font-size: 1em;
+  // font-size: 1rem;
   text-transform: uppercase;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
+  & p {
+    font-size: 1rem;
+    padding: 0.6rem;
+
+    @include mq(xsmall) {
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    @include mq(small) {
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    @include mq(medium) {
+      padding: 0.7rem;
+      font-size: 1.2rem;
+    }
+    @include mq(large) {
+      padding: 0.7rem;
+      font-size: 1.3rem;
+    }
+    @include mq(xlarge) {
+      padding: 0.7rem;
+      font-size: 1.4rem;
+    }
+    @include mq(xxlarge) {
+      padding: 0.7rem;
+      font-size: 1.5rem;
+    }
+  }
 }
 </style>

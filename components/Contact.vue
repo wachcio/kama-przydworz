@@ -7,9 +7,7 @@
       </div>
       <div class="contact__description">
         <p>Głównym kontaktem do nas jest telefon.</p>
-        <a class="contact__description--phone-number" :href="`tel:${phoneNumber}`">
-          <p>{{ phoneNumber }}</p>
-        </a>
+        <a class="contact__description--phone-number" :href="`tel:${phoneNumber}`">{{ phoneNumber }}</a>
         <p>
           Tutaj zawsze uzyskasz najpewniejsze i najświeższe informacje na każdy
           temat związany z domkami, kosztami czy terminami najmu.
@@ -83,38 +81,55 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0.4em;
-    @include mq(xsmall) {
-      font-size: 0.5em;
-    }
+    // font-size: 0.4em;
+    @include pictureAndDescription();
+
+    // @include mq(xsmall) {
+    //   font-size: 0.5em;
+    // }
+    // @include mq(small) {
+    //   font-size: 0.7em;
+    // }
     @include mq(small) {
-      font-size: 0.7em;
-    }
-    @include mq(medium) {
       flex-direction: row;
       align-items: center;
+      width: 100%;
     }
-    @include mq(large) {
-      font-size: 1em;
-    }
-    @include mq(xlarge) {
-      font-size: 1.1em;
-    }
+    // @include mq(large) {
+    //   font-size: 1em;
+    // }
+    // @include mq(xlarge) {
+    //   font-size: 1.1em;
+    // }
   }
   &__picture {
-    @include pictureAndDescription();
+    // @include pictureAndDescription();
+    width: 100%;
+    @include mq(small) {
+      width: 50%;
+    }
     & img {
       width: 100%;
       box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+      //   @include mq(small) {
+      //     width: 50%;
+      //   }
     }
   }
   &__description {
-    padding: 0.5em 1em;
+    padding: 2rem 0;
     text-align: justify;
-    @include pictureAndDescription();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mq(small) {
+      width: 50%;
+      padding-left: 1rem;
+    }
     &--phone-number {
       text-align: center;
-      font-size: 2em;
+      font-size: 2.7rem;
       font-weight: bold;
       color: $black;
       text-decoration: none;
