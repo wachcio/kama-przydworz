@@ -8,12 +8,14 @@
       </div>
     </div>
     <div class="content__description">
-      <p>{{ description }}</p>
+      <p v-html="parseDescriptionPhoneNumber()"></p>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'PictureDescription',
   components: {},
@@ -25,6 +27,7 @@ export default {
     }
   },
   computed: {
+    ...mapState(['phoneNumber']),
     modalStyle() {
       return this.modal ? { display: 'block' } : { display: 'none' }
     }
@@ -53,6 +56,14 @@ export default {
     },
     modalShowHide() {
       this.modal = !this.modal
+    },
+    parseDescriptionPhoneNumber() {
+      return this.description.includes(this.phoneNumber)
+        ? this.description.replace(
+            this.phoneNumber,
+            `<a href="tel:${this.phoneNumber}">${this.phoneNumber}</a>`
+          )
+        : this.description
     }
   }
 }
@@ -60,6 +71,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/main.scss';
+
 .content {
   width: 100%;
   display: flex;

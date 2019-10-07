@@ -4,7 +4,7 @@
     <div class="houses__content">
       <PictureDescription
         v-for="(item, index) in content"
-        :key="item.img"
+        :key="index"
         path="houses/"
         :img="item.img"
         :description="item.text"
@@ -26,22 +26,37 @@ export default {
         {
           img: 'IMG_6160.jpg',
           text:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sunt ad, itaque, dicta qui ipsa quae dolores quo nobis, ea maiores ullam vel cumque velit quia iste minima. Consequatur, illum?'
+            'Mamy do wynajęcia domek w cichym Przydworzu nad jeziorem Wieczno, gmina Wąbrzeźno.'
         },
         {
           img: 'IMG_6172.jpg',
           text:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sunt ad, itaque, dicta qui ipsa quae dolores quo nobis, ea maiores ullam vel cumque velit quia iste minima. Consequatur, illum?'
+            'Domek w zabudowie bliźniaczej, do wynajęcia każda z części, teren ogrodzony z możliwością zaparkowania na nim auta. W każdej części znajduje się kuchnia (lodówka, kuchenka gazowa), łazienka z prysznicem (ciepła woda) oraz dwa pokoje w których najmłodsi goście w razie niepogody znajdą zabawki, karty, szachy czy kolorowanki.'
         },
         {
           img: 'IMG_6174.jpg',
           text:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sunt ad, itaque, dicta qui ipsa quae dolores quo nobis, ea maiores ullam vel cumque velit quia iste minima. Consequatur, illum?'
+            'Możliwość wynajęcia dwóch stron domku jednocześnie. Domek kompletnie wyposażony (talerze, szklanki, sztućce, garnki itp). Dla naszych gości dostępny jest grill, hamak, miejsce na ognisko i dwa stoły z ławkami. Ogrodzony teren wspaniale nadaje się do zabawy z dziećmi, jak również dla dorosłych.'
         },
         {
           img: 'IMG_9140.jpg',
           text:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sunt ad, itaque, dicta qui ipsa quae dolores quo nobis, ea maiores ullam vel cumque velit quia iste minima. Consequatur, illum?'
+            'Piękne malownicze jezioro, ok 150 m do plaży. Idealne miejsce do wypoczynku z dziećmi (płytka czysta woda). Doskonałe tereny do wypoczynku wraz z rodziną, raj dla wędkarzy.'
+        },
+        {
+          img: 'IMG_9140.jpg',
+          text:
+            'W sezonie czynne sklepy, bary, dyskoteki przy plaży, możliwość wypożyczenia rowerów wodnych, kajaków. NIE WYNAJMUJEMY MŁODZIEŻY BEZ OPIEKUNA.'
+        },
+        {
+          img: 'IMG_9140.jpg',
+          text:
+            'Czas wynajmu minimum 2 doby w okresie poza sezonem. W sezonie czas wynajmu minimum 5 dni. Cena za wynajęcie 200 zł na dobę, dotyczy jednej strony domku w której pomieści się maksymalnie 6 osób. Doba zaczyna się w dniu przyjazdu od godz. 15:00 do godz. 12:00 dnia następnego.'
+        },
+        {
+          img: 'IMG_9140.jpg',
+          text:
+            'Więcej informacji udzielamy pod numerem telefonu +48 787 784 556'
         }
       ]
     }

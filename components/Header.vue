@@ -12,6 +12,7 @@
           </p>
         </div>
         <a :href="`tel:${phoneNumber}`">
+          <!-- <a :href="`tel:${$store.state.phoneNumber}`"> -->
           <div class="call">
             <div class="call-phone">
               <img class="call-phone-img" src="~/assets/img/phone.svg" alt srcset />
@@ -33,16 +34,17 @@
 
 <script>
 import Nav from '@/components/Nav'
+import vuex from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Header',
   components: { Nav },
   data() {
-    return {
-      phoneNumber: '+48 787 784 556'
-    }
+    return {}
   },
   computed: {
+    ...mapState(['phoneNumber']),
     logoText() {
       return `kama<span class="logo__yellow">-</span>przydwórz<span class="logo__yellow">.</span>pl`
     }

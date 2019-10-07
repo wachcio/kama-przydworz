@@ -2,12 +2,19 @@
   <section id="regulations" class="regulations">
     <h1>Regulamin domków</h1>
     <ol>
-      <li v-for="(item, index) in regulationText" v-if="item" :key="index">{{ item }}</li>
+      <li
+        v-for="(item, index) in regulationText"
+        v-if="item"
+        :key="index"
+        v-html="parseDescriptionPhoneNumber(item)"
+      ></li>
     </ol>
   </section>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import regulationTextRaw from '@/static/regulations.txt'
 export default {
   name: 'Regulations',
@@ -18,7 +25,7 @@ export default {
       regulationText: regulationTextRaw.split(/\n/g)
     }
   },
-  computed: {},
+  computed: { ...mapState(['phoneNumber']) },
   watch: {},
   mounted() {
     // this.regulationText = this.parseRegulationFiles()
@@ -26,6 +33,14 @@ export default {
   methods: {
     parseRegulationFiles() {
       return this.regulationTextRaw.split(/\n/g)
+    },
+    parseDescriptionPhoneNumber(item) {
+      return item.includes(this.phoneNumber)
+        ? item.replace(
+            this.phoneNumber,
+            `<a href="tel:${this.phoneNumber}">${this.phoneNumber}</a>`
+          )
+        : item
     }
   }
 }

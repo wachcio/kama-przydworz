@@ -18,16 +18,16 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'Contact',
   components: {},
   props: {},
   data() {
-    return {
-      phoneNumber: '+48 787 784 556'
-    }
+    return {}
   },
-  computed: {},
+  computed: { ...mapState(['phoneNumber']) },
   watch: {},
   created() {},
   methods: {}

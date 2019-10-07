@@ -27,7 +27,7 @@
           rel="noopener noreferrer"
         >
           <img src="~/assets/img/map/targeo.svg" alt />
-          Wyznacz trasę z Tagreo
+          Wyznacz trasę z Targeo
         </a>
         <br />
 
