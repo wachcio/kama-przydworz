@@ -14,12 +14,7 @@
         <a :href="`tel:${phoneNumber}`">
           <div class="call">
             <div class="call-phone">
-              <img
-                class="call-phone-img"
-                src="~/assets/img/phone.svg"
-                alt
-                srcset
-              />
+              <img class="call-phone-img" src="~/assets/img/phone.svg" alt srcset />
             </div>
             <div class="call-wrapper">
               <div class="call-number">{{ phoneNumber }}</div>
@@ -84,15 +79,26 @@ header {
   //   font-family: 'Lato', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.6em;
+  font-size: 0.7em;
   // min-width: 419px;
-  @include mq(xsmall) {
+  @include mq(xxsmall) {
     min-width: 0;
-    font-size: 0.8em;
   }
   @include mq(medium) {
     min-width: 0;
-    font-size: 1.4em;
+  }
+
+  & > p {
+    font-size: 1.1rem;
+    @include mq(xsmall) {
+      font-size: 1.5rem;
+    }
+    @include mq(medium) {
+      font-size: 1.7rem;
+    }
+    @include mq(large) {
+      font-size: 2.1rem;
+    }
   }
 }
 .logo__yellow {
@@ -130,7 +136,7 @@ header {
   }
 }
 .call-text {
-  font-size: 0.4em;
+  font-size: 0.5em;
   @include mq(small) {
     font-size: 0.6em;
   }
@@ -138,7 +144,7 @@ header {
     font-size: 0.8em;
   }
   @include mq(large) {
-    font-size: 0.9em;
+    font-size: 0.7em;
   }
 }
 .call-phone {

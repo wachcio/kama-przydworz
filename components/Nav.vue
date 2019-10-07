@@ -10,9 +10,7 @@
           :key="item.link"
           v-scroll-to="item.link"
           href="#"
-        >
-          {{ item.text }}
-        </b-nav-item>
+        >{{ item.text }}</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -69,15 +67,15 @@ export default {
   // text-transform: uppercase;
   @include mq(xxsmall) {
     padding-right: 0.6em;
-    font-size: 0.6em;
+    font-size: 0.9em;
   }
   @include mq(medium) {
-    font-size: 0.7em;
+    font-size: 1.1em;
   }
 
-  @include mq(large) {
-    font-size: 1em;
-  }
+  // @include mq(large) {
+  //   font-size: 1.em;
+  // }
 }
 
 .navbar-nav {

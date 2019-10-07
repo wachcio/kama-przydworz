@@ -96,13 +96,13 @@ export default {
         font-size: 0.8rem;
       }
       @include mq(small) {
-        font-size: 1rem;
+        font-size: 1.3rem;
       }
       @include mq(large) {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
       }
       @include mq(xlarge) {
-        font-size: 1.6rem;
+        font-size: 1.9rem;
       }
     }
     p {
@@ -114,13 +114,13 @@ export default {
         font-size: 0.6rem;
       }
       @include mq(small) {
-        font-size: 0.7rem;
+        font-size: 1rem;
       }
       @include mq(large) {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
       }
       @include mq(xlarge) {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
       }
     }
   }
@@ -135,6 +135,15 @@ export default {
     height: 0.2rem;
     padding: 0;
     margin: 0;
+    @include mq(small) {
+      height: 0.25rem;
+    }
+    @include mq(large) {
+      height: 0.3rem;
+    }
+    @include mq(xlarge) {
+      height: 0.3rem;
+    }
   }
   ol li.active {
     background-color: $yellow;
