@@ -145,6 +145,25 @@ export default {
     }
     & p {
       font-size: 1rem;
+
+      @include mq(xsmall) {
+        font-size: 1.1rem;
+      }
+      @include mq(small) {
+        font-size: 1.1rem;
+      }
+      @include mq(medium) {
+        font-size: 1.3rem;
+      }
+      @include mq(large) {
+        font-size: 1.7rem;
+      }
+      @include mq(xlarge) {
+        font-size: 1.8rem;
+      }
+      @include mq(xxlarge) {
+        font-size: 1.9rem;
+      }
     }
   }
 }

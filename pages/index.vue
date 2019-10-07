@@ -3,11 +3,13 @@
     <b-container>
       <Header />
       <Hero />
-      <Houses />
-      <Resort />
-      <AccessToUs />
-      <Regulations />
-      <Contact />
+      <main>
+        <Houses />
+        <Resort />
+        <AccessToUs />
+        <Regulations />
+        <Contact />
+      </main>
       <footer>
         <p>Wachcio 2019</p>
         <p></p>
