@@ -12,7 +12,6 @@
       </main>
       <footer>
         <p>Wachcio 2019</p>
-        <p></p>
       </footer>
     </b-container>
   </b-container>
@@ -49,6 +48,9 @@ footer {
   text-transform: uppercase;
   margin-bottom: 2rem;
   & p {
+    line-height: 1;
+    padding: 0;
+    margin: 0;
     font-size: 1rem;
     padding: 0.6rem;
 

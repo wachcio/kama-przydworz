@@ -19,8 +19,15 @@
         </div>
       </div>
       <div class="legend">
-        <div v-for="item in legend_items" :key="item.source" class="legend__item">
-          <img :src="require(`@/assets/img/resort/mapLegend/${item.source}.svg`)" alt />
+        <div
+          v-for="item in legend_items"
+          :key="item.source"
+          class="legend__item"
+        >
+          <img
+            :src="require(`@/assets/img/resort/mapLegend/${item.source}.svg`)"
+            alt
+          />
           <p>{{ item.description }}</p>
         </div>
       </div>

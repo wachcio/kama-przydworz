@@ -7,7 +7,7 @@
         v-if="item"
         :key="index"
         v-html="parseDescriptionPhoneNumber(item)"
-      ></li>
+      />
     </ol>
   </section>
 </template>

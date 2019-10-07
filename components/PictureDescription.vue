@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="content__description">
-      <p v-html="parseDescriptionPhoneNumber()"></p>
+      <p v-html="parseDescriptionPhoneNumber()" />
     </div>
   </div>
 </template>

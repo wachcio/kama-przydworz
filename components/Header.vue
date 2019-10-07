@@ -34,7 +34,6 @@
 
 <script>
 import Nav from '@/components/Nav'
-import vuex from 'vuex'
 import { mapState } from 'vuex'
 
 export default {

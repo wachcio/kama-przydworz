@@ -8,7 +8,7 @@ export default {
     htmlAttrs: {
       lang: 'pl'
     },
-    title: process.env.npm_package_name || '',
+    title: 'Kama-Przydwórz.pl - mynajem domków w Przydworzu. +48 787 784 556.',
 
     meta: [
       { charset: 'utf-8' },
@@ -16,7 +16,15 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          'Kama-Przydwórz.pl - mynajem domków w Przydworzu.  +48 787 784 556.'
+      },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'Keywords',
+        name: 'Keywords',
+        content:
+          'Kama-przydwórz.pl,+48 787 784 556,+48787784556,787784556,kama,domki,przydwórz,Przydworz,wieczno,kwatery,wynajem,odpoczynek,wakacje,pokoje,pokoj,pokój,wypoczynek'
       }
     ],
     link: [

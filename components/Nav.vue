@@ -10,7 +10,9 @@
           :key="item.link"
           v-scroll-to="item.link"
           href="#"
-        >{{ item.text }}</b-nav-item>
+        >
+          {{ item.text }}
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

@@ -1,36 +1,35 @@
 {
-  "name": "kama-przydworz",
-  "version": "1.0.0",
-  "description": "Kama-przydwórz. Domki letniskowe do wynajęcia w Przydworzu (nad jeziorem Wieczno)",
-  "author": "wachcio",
-  "private": true,
-  "scripts": {
-    "predev": "npm run lint",
-    "dev": "HOST=0.0.0.0 nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --fix --ignore-path .gitignore ."
-  },
-  "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
-    "bootstrap": "^4.1.3",
-    "bootstrap-vue": "^2.0.0-rc.11",
-    "image-webpack-loader": "^6.0.0",
-    "node-sass": "^4.12.0",
-    "nuxt": "^2.0.0",
-    "sass-loader": "^8.0.0",
-    "vue-scrollto": "^2.17.1"
-  },
-  "devDependencies": {
-    "@nuxtjs/eslint-config": "^1.0.1",
-    "@nuxtjs/eslint-module": "^1.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^6.1.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
-    "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4",
-    "raw-loader": "^3.1.0"
-  }
+   "name": "kama-przydworz",
+   "version": "1.0.0",
+   "description": "Kama-przydwórz. Domki letniskowe do wynajęcia w Przydworzu (nad jeziorem Wieczno)",
+   "author": "wachcio",
+   "private": true,
+   "scripts": {
+      "dev": "HOST=0.0.0.0 nuxt",
+      "build": "nuxt build",
+      "start": "nuxt start",
+      "generate": "nuxt generate",
+      "lint": "eslint --ext .js,.vue --fix --ignore-path .gitignore ."
+   },
+   "dependencies": {
+      "@nuxtjs/axios": "^5.3.6",
+      "bootstrap": "^4.1.3",
+      "bootstrap-vue": "^2.0.0-rc.11",
+      "image-webpack-loader": "^6.0.0",
+      "node-sass": "^4.12.0",
+      "nuxt": "^2.0.0",
+      "sass-loader": "^8.0.0",
+      "vue-scrollto": "^2.17.1"
+   },
+   "devDependencies": {
+      "@nuxtjs/eslint-config": "^1.0.1",
+      "@nuxtjs/eslint-module": "^1.0.0",
+      "babel-eslint": "^10.0.1",
+      "eslint": "^6.1.0",
+      "eslint-config-prettier": "^4.1.0",
+      "eslint-plugin-nuxt": ">=0.4.2",
+      "eslint-plugin-prettier": "^3.0.1",
+      "prettier": "^1.16.4",
+      "raw-loader": "^3.1.0"
+   }
 }
