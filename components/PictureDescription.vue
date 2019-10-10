@@ -1,9 +1,9 @@
 <template>
   <div class="content" :style="checkReverse()">
     <div class="content__picture" @click="modalShowHide()">
-      <img :src="require(`@/assets/img/${path}${img}`)" />
+      <img class="content__picture--img" :src="require(`@/assets/img/${path}${img}`)" />
       <div v-if="modal" class="content__picture--modal" :style="modalStyle">
-        <img :src="require(`@/assets/img/${path}${img}`)" />
+        <img :src="require(`@/assets/img/${path}fullSize/${img}`)" />
         <div class="x">X</div>
       </div>
     </div>
@@ -99,13 +99,17 @@ export default {
   &__picture {
     cursor: pointer;
     @include pictureAndDescription();
-    & > img {
-      width: 100%;
+    overflow: hidden;
+    min-height: 100%;
+    max-width: 100%;
+    &:hover &--img {
+      transform: scale(1.03) rotate(1deg);
+    }
+    &--img {
+      // width: 100%;
+
       box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
       transition: 0.1s transform;
-      &:hover {
-        transform: scale(1.03) rotate(1deg);
-      }
     }
 
     &--modal {
