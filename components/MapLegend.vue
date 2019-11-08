@@ -3,11 +3,9 @@
     <h2>Plan ośrodka</h2>
     <div class="map-legend__container">
       <div class="map">
-        <img
-          src="@/assets/img/resort/mapLegend/map.svg"
-          class="map__img"
-          @click="mapFullSizeShowHide()"
-        />
+        <!-- <img :src="mapSVG" class="map__img" @click="mapFullSizeShowHide()" /> -->
+        <MapSVG class="map__img" @click="mapFullSizeShowHide()" />
+        <!-- <svg id="map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">{{mapSVG}}</svg> -->
         <div
           v-if="mapFullSize"
           class="map__full-size"
@@ -19,15 +17,8 @@
         </div>
       </div>
       <div class="legend">
-        <div
-          v-for="item in legend_items"
-          :key="item.source"
-          class="legend__item"
-        >
-          <img
-            :src="require(`@/assets/img/resort/mapLegend/${item.source}.svg`)"
-            alt
-          />
+        <div v-for="item in legend_items" :key="item.source" class="legend__item">
+          <img :src="require(`@/assets/img/resort/mapLegend/${item.source}.svg`)" alt />
           <p>{{ item.description }}</p>
         </div>
       </div>
@@ -36,6 +27,8 @@
 </template>
 
 <script>
+import MapSVG from '@/assets/img/resort/mapLegend/map.svg?inline'
+
 export default {
   name: 'MapLegend',
   components: {},
@@ -74,6 +67,7 @@ export default {
       ]
     }
   },
+  components: { MapSVG },
   computed: {
     fullSizeStyle() {
       return this.mapFullSize ? { display: 'block' } : { display: 'none' }
