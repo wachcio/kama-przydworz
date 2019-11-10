@@ -3,7 +3,7 @@
     <h1>Jak dojechać do nas</h1>
     <div class="map">
       <div class="map__picture">
-        <img src="~/assets/img/map/map_street_map.png" alt />
+        <img src="~/assets/img/map/map_street_map.png" alt="mapa poglądowa" loading="lazy" />
       </div>
       <div class="map__description">
         <p>
@@ -16,7 +16,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="~/assets/img/map/google_maps.svg" alt />
+          <img src="~/assets/img/map/google_maps.svg" alt="Google Maps" loading="lazy" />
           Wyznacz trasę z Google Maps
         </a>
         <br />
@@ -26,7 +26,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="~/assets/img/map/targeo.svg" alt />
+          <img src="~/assets/img/map/targeo.svg" alt="Targeo" loading="lazy" />
           Wyznacz trasę z Targeo
         </a>
         <br />
@@ -36,7 +36,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="~/assets/img/map/open_street_map.png" alt />
+          <img src="~/assets/img/map/open_street_map.png" alt="OpenStreetMap" loading="lazy" />
           Wyznacz trasę z OpenStreetMap
         </a>
       </div>

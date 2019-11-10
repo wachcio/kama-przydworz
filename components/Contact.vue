@@ -3,16 +3,11 @@
     <h1>Kontakt</h1>
     <div class="contact__container">
       <div class="contact__picture">
-        <img src="@/assets/img/contact/iphone.jpg" alt />
+        <img src="@/assets/img/contact/iphone.jpg" alt="Telefon" loading="lazy" />
       </div>
       <div class="contact__description">
         <p>Głównym kontaktem do nas jest telefon.</p>
-        <a
-          class="contact__description--phone-number"
-          :href="`tel:${phoneNumber}`"
-        >
-          {{ phoneNumber }}
-        </a>
+        <a class="contact__description--phone-number" :href="`tel:${phoneNumber}`">{{ phoneNumber }}</a>
         <p>
           Tutaj zawsze uzyskasz najpewniejsze i najświeższe informacje na każdy
           temat związany z domkami, kosztami czy terminami najmu.

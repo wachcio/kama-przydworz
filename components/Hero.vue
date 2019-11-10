@@ -20,6 +20,7 @@
           <img
             class="d-block w-100"
             :src="require(`@/assets/img/hero/${image.img}`)"
+            loading="lazy"
             :alt="image.caption"
           />
         </template>

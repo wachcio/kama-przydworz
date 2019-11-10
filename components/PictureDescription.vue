@@ -2,7 +2,7 @@
   <div class="content" :style="checkReverse()">
     <div class="content__picture" @click="modalShowHide()">
       <div class="content__picture--img">
-        <img :src="require(`@/assets/img/${path}${img}`)" />
+        <img :src="require(`@/assets/img/${path}${img}`)" loading="lazy" />
       </div>
       <div v-if="modal" class="content__picture--modal" :style="modalStyle">
         <img :src="require(`@/assets/img/${path}fullSize/${img}`)" />

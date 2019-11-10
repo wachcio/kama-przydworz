@@ -12,13 +12,17 @@
           :style="fullSizeStyle"
           @click="mapFullSizeShowHide()"
         >
-          <img src="@/assets/img/resort/mapLegend/map.svg" />
+          <img src="@/assets/img/resort/mapLegend/map.svg" loading="lazy" />
           <div class="x">X</div>
         </div>
       </div>
       <div class="legend">
         <div v-for="item in legend_items" :key="item.source" class="legend__item">
-          <img :src="require(`@/assets/img/resort/mapLegend/${item.source}.svg`)" alt />
+          <img
+            :src="require(`@/assets/img/resort/mapLegend/${item.source}.svg`)"
+            :alt="item.description"
+            loading="lazy"
+          />
           <p>{{ item.description }}</p>
         </div>
       </div>

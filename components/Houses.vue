@@ -9,6 +9,7 @@
         :img="item.img"
         :description="item.text"
         :reverse="index % 2"
+        loading="lazy"
       />
     </div>
   </section>
