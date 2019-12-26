@@ -3,13 +3,7 @@
     <div class="header">
       <div class="header__left">
         <div class="logo">
-          <p>
-            kama
-            <span class="logo__yellow">-</span>
-            przydworz
-            <span class="logo__yellow">.</span>
-            pl
-          </p>
+          <p>kama<span class="logo__yellow">-</span>przydworz<span class="logo__yellow">.</span>pl</p>
         </div>
         <a :href="`tel:${phoneNumber}`">
           <!-- <a :href="`tel:${$store.state.phoneNumber}`"> -->
