@@ -35,24 +35,25 @@ a {
 }
 p,
 li {
-  font-size: 1rem;
+  font-size: 1.7rem;
   padding: 0.6rem;
 
   @include mq(xsmall) {
-    padding: 0.7rem;
-    font-size: 1.1rem;
+    padding: 0.9rem;
+    // font-size: 1.7rem;
+    // line-height: 1;
   }
   @include mq(small) {
-    padding: 0.7rem;
-    font-size: 1.1rem;
+    padding: 0.9rem;
+    // font-size: 1.5rem;
   }
   @include mq(medium) {
-    padding: 0.7rem;
-    font-size: 1.3rem;
+    padding: 0.9rem;
+    // font-size: 1.3rem;
   }
   @include mq(large) {
     padding: 0.7rem;
-    font-size: 1.7rem;
+    // font-size: 1.7rem;
   }
   @include mq(xlarge) {
     padding: 0.7rem;
@@ -65,7 +66,7 @@ li {
 }
 
 h1 {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   padding: 0.7rem;
@@ -73,27 +74,27 @@ h1 {
 
   @include mq(xxsmall) {
     padding: 0.9rem;
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
   }
   @include mq(xsmall) {
     padding: 1.1rem;
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
   }
   @include mq(small) {
     padding: 1.3rem;
-    font-size: 1.8rem;
+    // font-size: 1.8rem;
   }
   @include mq(medium) {
     padding: 1.5rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   @include mq(large) {
     padding: 1.7rem;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
   @include mq(xlarge) {
     padding: 1.3rem;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
   }
   @include mq(xxlarge) {
     padding: 1.5rem;

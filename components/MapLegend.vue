@@ -12,7 +12,10 @@
           :style="fullSizeStyle"
           @click="mapFullSizeShowHide()"
         >
-          <img src="@/assets/img/resort/mapLegend/map.svg" loading="lazy" />
+          <MapSVG />
+          <!-- <img src="@/assets/img/resort/fullSize/map.svg" loading="lazy" /> -->
+          <!-- <img :src="require(`@/assets/img/resort/fullSize/map.svg`)" loading="lazy" /> -->
+          <!-- <div v-html="require(`!html-loader!@/assets/img/resort/fullSize/map.svg`)" loading="lazy"></div> -->
           <div class="x">X</div>
         </div>
       </div>
@@ -31,7 +34,7 @@
 </template>
 
 <script>
-import MapSVG from '@/assets/img/resort/mapLegend/map.svg?inline'
+import MapSVG from '@/assets/img/resort/fullSize/map.svg?inline'
 
 export default {
   name: 'MapLegend',
@@ -39,6 +42,7 @@ export default {
   props: {},
   data() {
     return {
+      mapURL: 'map.svg',
       mapFullSize: false,
       legend_items: [
         { source: 'our_houses', description: 'nasze domki' },
@@ -193,7 +197,8 @@ export default {
     height: 100vh;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.95);
-    & img {
+    & img,
+    & svg {
       position: absolute;
       top: 50%;
       left: 50%;
