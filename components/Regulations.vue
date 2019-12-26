@@ -4,8 +4,8 @@
     <ol>
       <li
         v-for="(item, index) in regulationText"
-        v-if="item"
         :key="index"
+        v-if="item"
         v-html="parseDescriptionPhoneNumber(item)"
       />
     </ol>
@@ -20,7 +20,7 @@
 <script>
 import { mapState } from 'vuex'
 
-import regulationTextRaw from '@/static/regulations.txt'
+import regulationTextRaw from '@/assets/regulations.txt'
 export default {
   name: 'Regulations',
   components: {},

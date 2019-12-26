@@ -6,7 +6,7 @@
           <p>
             kama
             <span class="logo__yellow">-</span>
-            przydwórz
+            przydworz
             <span class="logo__yellow">.</span>
             pl
           </p>

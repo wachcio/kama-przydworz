@@ -24,7 +24,7 @@ export default {
         hid: 'Keywords',
         name: 'Keywords',
         content:
-          'Kama-przydwórz.pl,+48 787 784 556,+48787784556,787784556,kama,domki,przydwórz,Przydworz,wieczno,kwatery,wynajem,odpoczynek,wakacje,pokoje,pokoj,pokój,wypoczynek'
+          'Kama-przydworz.pl,+48 787 784 556,+48787784556,787784556,kama,domki,przydwórz,Przydworz,wieczno,kwatery,wynajem,odpoczynek,wakacje,pokoje,pokoj,pokój,wypoczynek'
       }
     ],
     link: [
