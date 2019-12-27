@@ -3,11 +3,9 @@
     <div class="header">
       <div class="header__left">
         <div class="logo">
-          <p>
-            kama
-            <span class="logo__yellow">-</span>przydworz
-            <span class="logo__yellow">.</span>pl
-          </p>
+          <a href="#">
+            <p>kama<span class="logo__yellow">-</span>przydworz<span class="logo__yellow">.</span>pl</p>
+          </a>
         </div>
         <a :href="`tel:${phoneNumber}`">
           <!-- <a :href="`tel:${$store.state.phoneNumber}`"> -->
@@ -56,13 +54,14 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/main.scss';
 header {
+  // position: sticky;
+  // top: 0;
+  // z-index: 900;
   background-color: $black;
   color: $white;
   height: 100%;
   display: flex;
   flex-direction: row;
-  //   align-items: center;
-  //   flex-basis: 50;
 }
 .header {
   // height: 107px;
@@ -90,9 +89,12 @@ header {
   @include mq(medium) {
     min-width: 0;
   }
+  & a:hover {
+    color: $white;
+  }
 
-  & > p {
-    font-size: 1.1rem;
+  & p {
+    font-size: 1.2rem;
     @include mq(xsmall) {
       font-size: 1.5rem;
     }

@@ -111,6 +111,7 @@ export default {
     &--modal {
       display: none;
       position: fixed;
+      z-index: 999;
       //   position: absolute;
       left: 0;
       top: 0;

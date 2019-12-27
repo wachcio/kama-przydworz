@@ -90,38 +90,38 @@ export default {
     // bottom: 0.2rem;
 
     h3 {
-      font-size: 0.6rem;
+      font-size: 0.9rem;
       color: $yellow;
       font-weight: bold;
       @include mq(xsmall) {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
       }
       @include mq(small) {
-        font-size: 1.3rem;
-      }
-      @include mq(large) {
         font-size: 1.6rem;
       }
-      @include mq(xlarge) {
+      @include mq(large) {
         font-size: 1.9rem;
+      }
+      @include mq(xlarge) {
+        font-size: 2.1rem;
       }
     }
     p {
       padding: 0;
       margin: 0;
       margin-bottom: 0.3rem;
-      font-size: 0.4rem;
+      font-size: 0.6rem;
       @include mq(xsmall) {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
       }
       @include mq(small) {
-        font-size: 1rem;
+        font-size: 1.4rem;
       }
       @include mq(large) {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
       }
       @include mq(xlarge) {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
       }
     }
   }

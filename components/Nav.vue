@@ -67,9 +67,9 @@ export default {
   color: $white !important;
   font-size: 0.5em;
   // text-transform: uppercase;
-  @include mq(xxsmall) {
+  @include mq(xsmall) {
     padding-right: 0.6em;
-    font-size: 0.9em;
+    font-size: 0.7em;
   }
   @include mq(medium) {
     font-size: 1.1em;
