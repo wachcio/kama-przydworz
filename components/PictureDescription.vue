@@ -2,10 +2,10 @@
   <div class="content" :style="checkReverse()">
     <div class="content__picture" @click="modalShowHide()">
       <div class="content__picture--img">
-        <img :src="require(`@/assets/img/${path}${img}`)" loading="lazy" />
+        <img :src="require(`@/assets/img/${path}${img}`)" :alt="alt" loading="lazy" />
       </div>
       <div v-if="modal" class="content__picture--modal" :style="modalStyle">
-        <img :src="require(`@/assets/img/${path}fullSize/${img}`)" />
+        <img :src="require(`@/assets/img/${path}fullSize/${img}`)" :alt="alt" />
         <div class="x">X</div>
       </div>
     </div>
@@ -21,7 +21,13 @@ import { mapState } from 'vuex'
 export default {
   name: 'PictureDescription',
   components: {},
-  props: { path: String, img: String, description: String, reverse: Number },
+  props: {
+    path: String,
+    img: String,
+    description: String,
+    alt: String,
+    reverse: Number
+  },
   data() {
     return {
       windowWidth: null,
@@ -29,7 +35,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['phoneNumber']),
+    ...mapState(['phoneNumber, phoneNumberTxt']),
     modalStyle() {
       return this.modal ? { display: 'block' } : { display: 'none' }
     }
@@ -63,7 +69,7 @@ export default {
       return this.description.includes(this.phoneNumber)
         ? this.description.replace(
             this.phoneNumber,
-            `<a href="tel:${this.phoneNumber}">${this.phoneNumber}</a>`
+            `<a href="tel:${this.phoneNumber}">${this.phoneNumberTxt}</a>`
           )
         : this.description
     }

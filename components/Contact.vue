@@ -7,7 +7,10 @@
       </div>
       <div class="contact__description">
         <p>Głównym kontaktem do nas jest telefon.</p>
-        <a class="contact__description--phone-number" :href="`tel:${phoneNumber}`">{{ phoneNumber }}</a>
+        <a
+          class="contact__description--phone-number"
+          :href="`tel:${phoneNumber}`"
+        >{{ phoneNumberTxt }}</a>
         <p>
           Tutaj zawsze uzyskasz najpewniejsze i najświeższe informacje na każdy
           temat związany z domkami, kosztami czy terminami najmu.
@@ -27,7 +30,7 @@ export default {
   data() {
     return {}
   },
-  computed: { ...mapState(['phoneNumber']) },
+  computed: { ...mapState(['phoneNumber', 'phoneNumberTxt']) },
   watch: {},
   created() {},
   methods: {}

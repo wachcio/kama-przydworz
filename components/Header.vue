@@ -3,16 +3,24 @@
     <div class="header">
       <div class="header__left">
         <div class="logo">
-          <p>kama<span class="logo__yellow">-</span>przydworz<span class="logo__yellow">.</span>pl</p>
+          <p>
+            kama
+            <span class="logo__yellow">-</span>przydworz
+            <span class="logo__yellow">.</span>pl
+          </p>
         </div>
         <a :href="`tel:${phoneNumber}`">
           <!-- <a :href="`tel:${$store.state.phoneNumber}`"> -->
           <div class="call">
             <div class="call-phone">
-              <img class="call-phone-img" src="~/assets/img/phone.svg" alt srcset />
+              <img
+                class="call-phone-img"
+                src="~/assets/img/phone.svg"
+                :alt="`telefon ${phoneNumberTxt}`"
+              />
             </div>
             <div class="call-wrapper">
-              <div class="call-number">{{ phoneNumber }}</div>
+              <div class="call-number">{{ phoneNumberTxt }}</div>
 
               <div class="call-text">zarezerwuj domek już dziś</div>
             </div>
@@ -37,7 +45,7 @@ export default {
     return {}
   },
   computed: {
-    ...mapState(['phoneNumber']),
+    ...mapState(['phoneNumber', 'phoneNumberTxt']),
     logoText() {
       return `kama<span class="logo__yellow">-</span>przydwórz<span class="logo__yellow">.</span>pl`
     }

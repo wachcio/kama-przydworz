@@ -30,7 +30,7 @@ export default {
       regulationText: regulationTextRaw.split(/\n/g)
     }
   },
-  computed: { ...mapState(['phoneNumber']) },
+  computed: { ...mapState(['phoneNumber', 'phoneNumberTxt']) },
   watch: {},
   mounted() {
     // this.regulationText = this.parseRegulationFiles()
@@ -40,10 +40,10 @@ export default {
       return this.regulationTextRaw.split(/\n/g)
     },
     parseDescriptionPhoneNumber(item) {
-      return item.includes(this.phoneNumber)
+      return item.includes(this.phoneNumberTxt)
         ? item.replace(
-            this.phoneNumber,
-            `<a href="tel:${this.phoneNumber}">${this.phoneNumber}</a>`
+            this.phoneNumberTxt,
+            `<a href="tel:${this.phoneNumber}" >${this.phoneNumberTxt}</a>`
           )
         : item
     }

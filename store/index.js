@@ -1,5 +1,6 @@
 export const state = () => ({
-  phoneNumber: '+48 787 784 556'
+  phoneNumberTxt: '+48 787 784 556',
+  phoneNumber: '+48787784556'
 })
 
 export const mutations = {

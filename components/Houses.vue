@@ -8,6 +8,7 @@
         path="houses/"
         :img="item.img"
         :description="item.text"
+        :alt="`Kama Przydwórz domek_${index+1}`"
         :reverse="index % 2"
         loading="lazy"
       />
