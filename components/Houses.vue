@@ -28,7 +28,7 @@ export default {
         {
           img: 'IMG_6176.jpg',
           text:
-            'Mamy do wynajęcia domek w cichym Przydworzu nad jeziorem Wieczno, gmina Wąbrzeźno.'
+            'Mamy do wynajęcia domek w cichej miejscowości Przydwórz nad jeziorem Wieczno, gmina Wąbrzeźno.'
         },
         {
           img: 'IMG_6173.jpg',
