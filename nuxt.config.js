@@ -8,7 +8,7 @@ export default {
     htmlAttrs: {
       lang: 'pl'
     },
-    title: 'Kama-przydworz.pl - wynajem domków w Przydworzu. +48 787 784 556.',
+    title: 'Kama-przydworz.pl - wynajem domków w Przydworzu - 787 784 556',
 
     meta: [
       { charset: 'utf-8' },
@@ -17,7 +17,7 @@ export default {
         // hid: 'description',
         name: 'description',
         content:
-          'Wynajem domów Przydwórz|Domki letniskowe w Przydworzu|787784556|'
+          'Domki Przydwórz(wynajem)|Domki letniskowe w Przydworzu|+48787784556|'
       },
 
       {
@@ -76,8 +76,16 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     'vue-scrollto/nuxt',
-    '@nuxtjs/svg'
+    '@nuxtjs/svg',
+    '@nuxtjs/robots'
   ],
+  robots: {
+    /* module options */
+    UserAgent: '*',
+    Allow: '/',
+    Disallow: '/Regulamin.odt',
+    Sitemap: 'https://kama-przydworz.pl/sitemap.xml'
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
