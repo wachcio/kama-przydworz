@@ -10,7 +10,6 @@
         :alt="`Ośrodek wypoczynkowy Przydwórz_${index+1}`"
         :description="item.text"
         :reverse="index % 2"
-        loading="lazy"
       />
     </div>
     <MapLegend />
