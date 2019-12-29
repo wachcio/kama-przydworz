@@ -67,6 +67,10 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module'
   ],
+  serverMiddleware: [
+    // Will register redirect-ssl npm package
+    'redirect-ssl'
+  ],
   /*
    ** Nuxt.js modules
    */

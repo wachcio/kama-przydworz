@@ -21,6 +21,7 @@
       "image-webpack-loader": "^6.0.0",
       "node-sass": "^4.12.0",
       "nuxt": "^2.0.0",
+      "redirect-ssl": "^1.4.1",
       "sass-loader": "^8.0.0",
       "vue-scrollto": "^2.17.1",
       "vue-svg-loader": "^0.14.0"
