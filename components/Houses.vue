@@ -1,6 +1,6 @@
 <template>
   <section id="houses" class="houses">
-    <H1>Nasze domki</H1>
+    <H1>Domki na wynajem kama-przydwórz</H1>
     <div class="houses__content">
       <PictureDescription
         v-for="(item, index) in content"
@@ -8,7 +8,7 @@
         path="houses/"
         :img="item.img"
         :description="item.text"
-        :alt="`Kama Przydwórz domek_${index+1}`"
+        :alt="`Kama Przydwórz domek na wynajem_${index+1}`"
         :reverse="index % 2"
       />
     </div>

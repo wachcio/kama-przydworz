@@ -17,14 +17,14 @@ export default {
         // hid: 'description',
         name: 'description',
         content:
-          'Domki Przydwórz(wynajem)|Domki letniskowe w Przydworzu|+48787784556|'
+          'Domki Przydwórz(wynajem)|Wynajem domków letniskowych w Przydworzu|+48787784556'
       },
 
       {
         // hid: 'Keywords',
         name: 'Keywords',
         content:
-          'Kama-przydworz.pl,kama-przydwórz,kama-przydwórz.pl,+48 787 784 556,+48787784556,787784556,kama,domki, domy,wynajem domków,wynajem domki,wynajem domków w Przydworzu,domki Przydwórz,domki Przydworz,Przydwórz,Przydworz,wieczno,kwatery,wynajem,odpoczynek,wakacje,pokoje,pokoj,pokój,wypoczynek'
+          'Kama-przydworz.pl,kama-przydwórz,kama-przydwórz.pl,+48 787 784 556,+48787784556,787784556,kama,domki, domy,wynajem domków,wynajem domki,wynajem domków w Przydworzu,domki Przydwórz,domki Przydworz,Przydwórz,Przydworz,wieczno,kwatery,wynajem,odpoczynek,wakacje,pokoje,pokoj,pokój,wypoczynek, tanie domki, tani wypoczynek, tani'
       },
       {
         // hid: 'robots',
