@@ -1,6 +1,6 @@
 <template>
   <section id="contact" class="contact">
-    <h1>Kontakt</h1>
+    <h2>Kontakt</h2>
     <div class="contact__container">
       <div class="contact__picture">
         <img src="@/assets/img/contact/iphone.jpg" alt="Telefon" loading="lazy" />

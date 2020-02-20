@@ -1,6 +1,6 @@
 <template>
   <section id="access-to-us" class="access-to-us">
-    <h1>Jak dojechać do nas</h1>
+    <h2>Jak dojechać do nas</h2>
     <div class="map">
       <div class="map__picture">
         <img src="~/assets/img/map/map_street_map.png" alt="mapa poglądowa" loading="lazy" />

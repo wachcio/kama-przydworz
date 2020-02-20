@@ -1,6 +1,6 @@
 <template>
   <section id="resort" class="resort">
-    <H1>Ośrodek wypoczynkowy Przydwórz</H1>
+    <H2>Ośrodek wypoczynkowy Przydwórz</H2>
     <div class="resort__content">
       <PictureDescription
         v-for="(item, index) in content"
