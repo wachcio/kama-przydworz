@@ -1,6 +1,6 @@
 <template>
   <section id="regulations" class="regulations">
-    <h1>Regulamin domków</h1>
+    <h2>Regulamin domków</h2>
     <ol>
       <li
         v-for="(item, index) in regulationText"
@@ -9,8 +9,8 @@
         v-html="parseDescriptionPhoneNumber(item)"
       />
     </ol>
-    <h2>DZIĘKUJEMY ZA WSPÓŁPRACĘ I ŻYCZYMY UDANEGO WYPOCZYNKU</h2>
-    <h3>Telefony alarmowe</h3>
+    <h3>DZIĘKUJEMY ZA WSPÓŁPRACĘ I ŻYCZYMY UDANEGO WYPOCZYNKU</h3>
+    <h4>Telefony alarmowe</h4>
     <p>POGOTOWIE RATUNKOWE: 999 LUB 112</p>
     <p>STRAŻ POŻARNA: 998 LUB 112</p>
     <p>POLICJA: 997 LUB 112</p>
@@ -58,23 +58,9 @@ export default {
   text-align: justify;
 
   ol {
-    padding: 0 0 3rem 1.8rem;
-    @include mq(xsmall) {
-      padding: 0 0 3rem 2rem;
-    }
-    @include mq(small) {
-      padding: 0 0 3rem 2.2rem;
-    }
-    @include mq(medium) {
-      padding: 0 0 3rem 2.8rem;
-    }
-    @include mq(large) {
-      padding: 0 0 3rem 3.2rem;
-    }
+    padding: 0px 1rem 3rem 3.2rem;
+
     @include mq(xlarge) {
-      padding: 0 0 3rem 3.8rem;
-    }
-    @include mq(xxlarge) {
       padding: 0 0 3rem 3.8rem;
     }
   }

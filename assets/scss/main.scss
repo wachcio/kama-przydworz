@@ -72,10 +72,12 @@ li {
 }
 
 h1 {
+  // font-family: 'Montserrat', sans-serif !important;
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   padding: 0.7rem;
+  margin-top: 1.3rem;
   text-align: center;
 
   @include mq(xxsmall) {
@@ -107,13 +109,14 @@ h1 {
     font-size: 2.6rem;
   }
 }
-h2 {
+h2,
+h3 {
   font-size: 0.9em;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   padding: 0.4em;
-
+  margin-top: 1.3rem;
   @include mq(medium) {
     padding: 0.6em;
     font-size: 1.3em;
@@ -128,7 +131,7 @@ h2 {
     font-size: 1.6em;
   }
 }
-h3 {
+h4 {
   font-size: 0.8em;
   font-weight: bold;
   text-transform: uppercase;
