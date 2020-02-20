@@ -11,7 +11,7 @@
         <Contact />
       </main>
       <footer>
-        <p>Wachcio 2019-2020</p>
+        <p>Wachcio &copy; 2019-2020</p>
       </footer>
     </b-container>
   </b-container>
