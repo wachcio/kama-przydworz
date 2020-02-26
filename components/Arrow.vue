@@ -1,5 +1,5 @@
 <template>
-  <a href="#" v-scroll-to="'#top'" class="arrow">
+  <a href="#" v-scroll-to="'#top'" class="arrow" title="Przewiń na górę strony">
     <fa :icon="['fas', 'angle-double-up']" class="arrow__icon" />
   </a>
 </template>
