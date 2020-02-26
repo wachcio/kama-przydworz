@@ -37,18 +37,15 @@
               :srcSet="require(`@/assets/img/${path}fullSize/${img}?webp`)"
               type="image/webp"
               :alt="alt"
-              loading="lazy"
             />
             <source
               :srcSet="require(`@/assets/img/${path}fullSize/${img}`)"
               type="image/jpeg"
               :alt="alt"
-              loading="lazy"
             />
             <img
               :srcSet="require(`@/assets/img/${path}fullSize/${img}`)"
               :alt="alt"
-              loading="lazy"
             />
           </picture>
         </figure>

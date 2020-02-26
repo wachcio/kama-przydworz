@@ -20,7 +20,6 @@
           <img
             class="d-block w-100"
             :src="require(`@/assets/img/hero/${image.img}`)"
-            loading="lazy"
             :alt="image.caption"
           />
         </template>
@@ -82,6 +81,7 @@ export default {
 @import '@/assets/scss/main.scss';
 #carousel-hero {
   width: 100% !important;
+  // height: calc(100% * 0.6) !important;
 
   .carousel-caption {
     background-color: rgba(0, 0, 0, 0.7);
