@@ -17,11 +17,32 @@
         :text="image.text"
       >
         <template v-slot:img>
-          <img
+          <!-- <img
             class="d-block w-100"
             :src="require(`@/assets/img/hero/${image.img}`)"
             :alt="image.caption"
-          />
+          /> -->
+          <figure>
+            <picture>
+              <source
+                :srcSet="require(`@/assets/img/hero/${image.img}?webp`)"
+                type="image/webp"
+                :alt="image.caption"
+                class="d-block w-100"
+              />
+              <source
+                :srcSet="require(`@/assets/img/hero/${image.img}`)"
+                type="image/jpeg"
+                :alt="image.caption"
+                class="d-block w-100"
+              />
+              <img
+                :srcSet="require(`@/assets/img/hero/${image.img}`)"
+                :alt="image.caption"
+                class="d-block w-100"
+              />
+            </picture>
+          </figure>
         </template>
       </b-carousel-slide>
     </b-carousel>
