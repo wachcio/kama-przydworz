@@ -67,6 +67,7 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module'
   ],
+
   serverMiddleware: [
     // Will register redirect-ssl npm package
     'redirect-ssl'
@@ -81,7 +82,20 @@ export default {
     '@nuxtjs/axios',
     'vue-scrollto/nuxt',
     '@nuxtjs/svg',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+
+    [
+      'nuxt-fontawesome',
+      {
+        component: 'fa',
+        imports: [
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['faAngleDoubleUp']
+          }
+        ]
+      }
+    ]
   ],
   robots: {
     /* module options */

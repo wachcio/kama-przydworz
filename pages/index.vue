@@ -1,7 +1,7 @@
 <template>
   <b-container fluid>
     <b-container>
-      <Header />
+      <Header id="top" />
       <Hero />
       <main>
         <Houses />
@@ -13,6 +13,7 @@
       <footer>
         <p>Wachcio &copy; 2019-2020</p>
       </footer>
+      <Arrow />
     </b-container>
   </b-container>
 </template>
@@ -25,10 +26,20 @@ import Resort from '@/components/Resort.vue'
 import AccessToUs from '@/components/AccesToUs.vue'
 import Regulations from '@/components/Regulations.vue'
 import Contact from '@/components/Contact.vue'
+import Arrow from '@/components/Arrow.vue'
 
 export default {
   name: 'App',
-  components: { Header, Hero, Houses, Resort, AccessToUs, Regulations, Contact }
+  components: {
+    Header,
+    Hero,
+    Houses,
+    Resort,
+    AccessToUs,
+    Regulations,
+    Contact,
+    Arrow
+  }
 }
 </script>
 
