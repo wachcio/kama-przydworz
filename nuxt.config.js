@@ -81,9 +81,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     'vue-scrollto/nuxt',
-    '@nuxtjs/svg',
-    '@nuxtjs/robots',
 
+    '@nuxtjs/robots',
     [
       'nuxt-fontawesome',
       {
@@ -95,8 +94,39 @@ export default {
           }
         ]
       }
-    ]
+    ],
+    '@bazzite/nuxt-optimized-images',
+    '@nuxtjs/svg'
   ],
+  // optimizedImages: {
+  //   optimizeImages: true
+  // },
+  optimizedImages: {
+    inlineImageLimit: -1,
+    imagesName: ({ isDev }) =>
+      isDev
+        ? '[path][name][hash:optimized].[ext]'
+        : 'img/[contenthash:7].[ext]',
+    responsiveImagesName: ({ isDev }) =>
+      isDev
+        ? '[path][name]--[width][hash:optimized].[ext]'
+        : 'img/[contenthash:7]-[width].[ext]',
+    handleImages: ['jpeg', 'png', 'webp', 'gif'],
+    optimizeImages: true,
+    optimizeImagesInDev: false,
+    defaultImageLoader: 'img-loader',
+    mozjpeg: {
+      quality: 85
+    },
+    optipng: false,
+    pngquant: {
+      speed: 7,
+      quality: [0.65, 0.8]
+    },
+    webp: {
+      quality: 85
+    }
+  },
   robots: {
     /* module options */
     UserAgent: '*',
@@ -109,6 +139,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+
   /*
    ** Build configuration
    */

@@ -4,7 +4,10 @@
     <div class="map-legend__container">
       <div class="map">
         <!-- <img :src="mapSVG" class="map__img" @click="mapFullSizeShowHide()" /> -->
+
+        <!-- Dobra wersja -->
         <MapSVG class="map__img" @click="mapFullSizeShowHide()" />
+
         <!-- <svg id="map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">{{mapSVG}}</svg> -->
         <div
           v-if="mapFullSize"
@@ -13,6 +16,7 @@
           @click="mapFullSizeShowHide()"
         >
           <MapSVG />
+
           <!-- <img src="@/assets/img/resort/fullSize/map.svg" loading="lazy" /> -->
           <!-- <img :src="require(`@/assets/img/resort/fullSize/map.svg`)" loading="lazy" /> -->
           <!-- <div v-html="require(`!html-loader!@/assets/img/resort/fullSize/map.svg`)" loading="lazy"></div> -->
@@ -20,7 +24,11 @@
         </div>
       </div>
       <div class="legend">
-        <div v-for="item in legend_items" :key="item.source" class="legend__item">
+        <div
+          v-for="item in legend_items"
+          :key="item.source"
+          class="legend__item"
+        >
           <img
             :src="require(`@/assets/img/resort/mapLegend/${item.source}.svg`)"
             :alt="item.description"

@@ -7,7 +7,7 @@
         :key="item.img"
         path="resort/"
         :img="item.img"
-        :alt="`Kama - Ośrodek wypoczynkowy Przydwórz_${index+1}`"
+        :alt="`Kama - Ośrodek wypoczynkowy Przydwórz_${index + 1}`"
         :description="item.text"
         :reverse="index % 2"
       />

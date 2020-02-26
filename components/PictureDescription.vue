@@ -1,9 +1,34 @@
 <template>
   <div class="content" :style="checkReverse()">
     <div class="content__picture" @click="modalShowHide()">
-      <div class="content__picture--img">
-        <img :src="require(`@/assets/img/${path}${img}`)" :alt="alt" loading="lazy" />
-      </div>
+      <!-- <div class="content__picture--img">
+        <img
+          :src="require(`@/assets/img/${path}${img}`)"
+          :alt="alt"
+          loading="lazy"
+        /> -->
+      <figure class="content__picture--img">
+        <picture class="content__picture--img">
+          <source
+            :srcSet="require(`@/assets/img/${path}${img}?webp`)"
+            type="image/webp"
+            :alt="alt"
+            loading="lazy"
+          />
+          <source
+            :srcSet="require(`@/assets/img/${path}${img}`)"
+            type="image/jpeg"
+            :alt="alt"
+            loading="lazy"
+          />
+          <img
+            :srcSet="require(`@/assets/img/${path}${img}`)"
+            :alt="alt"
+            loading="lazy"
+          />
+        </picture>
+      </figure>
+      <!-- </div> -->
       <div v-if="modal" class="content__picture--modal" :style="modalStyle">
         <img :src="require(`@/assets/img/${path}fullSize/${img}`)" :alt="alt" />
         <div class="x">X</div>
@@ -96,7 +121,8 @@ export default {
       overflow: hidden;
       box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
 
-      & > img {
+      & > img,
+      & > source {
         width: 100%;
         position: relative;
         display: block;
