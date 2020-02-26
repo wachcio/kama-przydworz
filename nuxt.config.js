@@ -124,7 +124,7 @@ export default {
       quality: [0.65, 0.8]
     },
     webp: {
-      quality: 85
+      quality: 80
     }
   },
   robots: {
