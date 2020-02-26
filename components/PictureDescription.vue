@@ -30,7 +30,28 @@
       </figure>
       <!-- </div> -->
       <div v-if="modal" class="content__picture--modal" :style="modalStyle">
-        <img :src="require(`@/assets/img/${path}fullSize/${img}`)" :alt="alt" />
+        <!-- <img :src="require(`@/assets/img/${path}fullSize/${img}`)" :alt="alt" /> -->
+        <figure>
+          <picture>
+            <source
+              :srcSet="require(`@/assets/img/${path}fullSize/${img}?webp`)"
+              type="image/webp"
+              :alt="alt"
+              loading="lazy"
+            />
+            <source
+              :srcSet="require(`@/assets/img/${path}fullSize/${img}`)"
+              type="image/jpeg"
+              :alt="alt"
+              loading="lazy"
+            />
+            <img
+              :srcSet="require(`@/assets/img/${path}fullSize/${img}`)"
+              :alt="alt"
+              loading="lazy"
+            />
+          </picture>
+        </figure>
         <div class="x">X</div>
       </div>
     </div>
