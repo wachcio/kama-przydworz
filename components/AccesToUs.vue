@@ -3,7 +3,28 @@
     <h2>Jak dojechać do nas</h2>
     <div class="map">
       <div class="map__picture">
-        <img src="~/assets/img/map/map_street_map.png" alt="mapa poglądowa" loading="lazy" />
+        <!-- <img src="~/assets/img/map/map_street_map.png" alt="mapa poglądowa" loading="lazy" /> -->
+        <figure>
+          <picture>
+            <source
+              :srcSet="require(`~/assets/img/map/map_street_map.png?webp`)"
+              type="image/webp"
+              alt="Mapa poglądowa"
+              loading="lazy"
+            />
+            <source
+              :srcSet="require(`~/assets/img/map/map_street_map.png`)"
+              type="image/png"
+              alt="Mapa poglądowa"
+              loading="lazy"
+            />
+            <img
+              :srcSet="require(`~/assets/img/map/map_street_map.png`)"
+              alt="Mapa poglądowa"
+              loading="lazy"
+            />
+          </picture>
+        </figure>
       </div>
       <div class="map__description">
         <p>
@@ -16,7 +37,11 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="~/assets/img/map/google_maps.svg" alt="Google Maps" loading="lazy" />
+          <img
+            src="~/assets/img/map/google_maps.svg"
+            alt="Google Maps"
+            loading="lazy"
+          />
           Wyznacz trasę z Google Maps
         </a>
         <br />
@@ -36,7 +61,11 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="~/assets/img/map/open_street_map.png" alt="OpenStreetMap" loading="lazy" />
+          <img
+            src="~/assets/img/map/open_street_map.png"
+            alt="OpenStreetMap"
+            loading="lazy"
+          />
           Wyznacz trasę z OpenStreetMap
         </a>
       </div>
