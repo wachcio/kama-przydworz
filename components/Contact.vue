@@ -3,14 +3,36 @@
     <h2>Kontakt</h2>
     <div class="contact__container">
       <div class="contact__picture">
-        <img src="@/assets/img/contact/iphone.jpg" alt="Telefon" loading="lazy" />
+        <!-- <img src="@/assets/img/contact/iphone.jpg" alt="Telefon" loading="lazy" /> -->
+        <figure>
+          <picture>
+            <source
+              :srcSet="require(`@/assets/img/contact/iphone.jpg?webp`)"
+              type="image/webp"
+              alt="Telefon"
+              loading="lazy"
+            />
+            <source
+              :srcSet="require(`@/assets/img/contact/iphone.jpg`)"
+              type="image/jpeg"
+              alt="Telefon"
+              loading="lazy"
+            />
+            <img
+              :srcSet="require(`@/assets/img/contact/iphone.jpg`)"
+              alt="Telefon"
+              loading="lazy"
+            />
+          </picture>
+        </figure>
       </div>
       <div class="contact__description">
         <p>Głównym kontaktem do nas jest telefon.</p>
         <a
           class="contact__description--phone-number"
           :href="`tel:${phoneNumber}`"
-        >{{ phoneNumberTxt }}</a>
+          >{{ phoneNumberTxt }}</a
+        >
         <p>
           Tutaj zawsze uzyskasz najpewniejsze i najświeższe informacje na każdy
           temat związany z domkami, kosztami czy terminami najmu.

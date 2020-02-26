@@ -10,10 +10,10 @@
       />
     </ol>
     <h3>DZIĘKUJEMY ZA WSPÓŁPRACĘ I ŻYCZYMY UDANEGO WYPOCZYNKU</h3>
-    <h4>Telefony alarmowe</h4>
+    <!-- <h4>Telefony alarmowe</h4>
     <p>POGOTOWIE RATUNKOWE: 999 LUB 112</p>
     <p>STRAŻ POŻARNA: 998 LUB 112</p>
-    <p>POLICJA: 997 LUB 112</p>
+    <p>POLICJA: 997 LUB 112</p> -->
   </section>
 </template>
 
