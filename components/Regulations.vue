@@ -2,21 +2,14 @@
   <section id="regulations" class="regulations">
     <h2>Regulamin domków</h2>
 
-    <ol v-if="showMore && regulationText">
-      <li
-        v-for="(item, index) in regulationText"
-        :key="index"
-        v-html="parseDescriptionPhoneNumber(item)"
-      />
-    </ol>
-    <ol v-if="!showMore && regulationText">
+    <ol v-if="regulationText">
       <li
         v-for="(item, index) in listLimit"
         :key="index"
         v-html="parseDescriptionPhoneNumber(item)"
       />
     </ol>
-    <button @click="showMore=!showMore">{{!showMore?'Czytaj więcej...':'Czytaj mniej...'}}</button>
+    <button class="readMore" @click="showMore=!showMore">{{!showMore?'Czytaj więcej...':'Czytaj mniej...'}}</button>
     <h3>DZIĘKUJEMY ZA WSPÓŁPRACĘ I ŻYCZYMY UDANEGO WYPOCZYNKU</h3>
     <!-- <h4>Telefony alarmowe</h4>
     <p>POGOTOWIE RATUNKOWE: 999 LUB 112</p>
@@ -43,8 +36,13 @@ export default {
   computed: {
     ...mapState(['phoneNumber', 'phoneNumberTxt']),
     listLimit() {
+      if (!this.showMore){
       return this.regulationText.slice(0, this.howManyLiShow)
+      } else {
+        return this.regulationText.slice(0, -1)
+      }
     }
+
   },
   watch: {},
   mounted() {
@@ -78,6 +76,25 @@ export default {
     @include mq(xlarge) {
       padding: 0 0 3rem 3.8rem;
     }
+  }
+  .readMore {
+    // padding: .4em;
+    // background-color: $yellow;
+    // border: 2px solid $black;
+    // border-radius: 1em;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    // box-shadow: 4px 4px 5px 0px $yellow;
+
+    text-align: center;
+    background-color: $black;
+    border: 2px solid $black;
+    border-radius: 1em;
+    border-bottom-right-radius: 0;
+    padding: .5em 1em;
+    margin: .3em;
+    font-size: 1.1em;
+    // font-style: italic;
+    color: $yellow;
   }
 }
 </style>
