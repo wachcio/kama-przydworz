@@ -1,19 +1,27 @@
 <template>
   <section id="regulations" class="regulations">
     <h2>Regulamin domków</h2>
-    <ol>
+
+    <ol v-if="showMore && regulationText">
       <li
         v-for="(item, index) in regulationText"
         :key="index"
-        v-if="item"
         v-html="parseDescriptionPhoneNumber(item)"
       />
     </ol>
+    <ol v-if="!showMore && regulationText">
+      <li
+        v-for="(item, index) in listLimit"
+        :key="index"
+        v-html="parseDescriptionPhoneNumber(item)"
+      />
+    </ol>
+    <button @click="showMore=!showMore">{{!showMore?'Czytaj więcej...':'Czytaj mniej...'}}</button>
     <h3>DZIĘKUJEMY ZA WSPÓŁPRACĘ I ŻYCZYMY UDANEGO WYPOCZYNKU</h3>
     <!-- <h4>Telefony alarmowe</h4>
     <p>POGOTOWIE RATUNKOWE: 999 LUB 112</p>
     <p>STRAŻ POŻARNA: 998 LUB 112</p>
-    <p>POLICJA: 997 LUB 112</p> -->
+    <p>POLICJA: 997 LUB 112</p>-->
   </section>
 </template>
 
@@ -27,10 +35,17 @@ export default {
   props: {},
   data() {
     return {
-      regulationText: regulationTextRaw.split(/\n/g)
+      regulationText: regulationTextRaw.split(/\n/g),
+      showMore: false,
+      howManyLiShow: 5
     }
   },
-  computed: { ...mapState(['phoneNumber', 'phoneNumberTxt']) },
+  computed: {
+    ...mapState(['phoneNumber', 'phoneNumberTxt']),
+    listLimit() {
+      return this.regulationText.slice(0, this.howManyLiShow)
+    }
+  },
   watch: {},
   mounted() {
     // this.regulationText = this.parseRegulationFiles()
