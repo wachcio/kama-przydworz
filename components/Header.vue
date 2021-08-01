@@ -3,7 +3,15 @@
     <div class="header">
       <div class="header__left">
         <div class="logo">
-          <a href="https://kama-przydworz.pl/"><p>kama<span class="logo__yellow">-</span>przydworz<span class="logo__yellow">.</span>pl</p></a>
+          <a href="https://kama-przydworz.pl/">
+            <p>
+              kama
+              <span class="logo__yellow">-</span>
+              przydworz
+              <span class="logo__yellow">.</span>
+              pl
+            </p>
+          </a>
         </div>
         <a :href="`tel:${phoneNumber}`">
           <!-- <a :href="`tel:${$store.state.phoneNumber}`"> -->

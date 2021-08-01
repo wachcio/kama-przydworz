@@ -8,7 +8,7 @@ export default {
     htmlAttrs: {
       lang: 'pl'
     },
-    title: 'Kama-przydworz.pl - wynajem domków w Przydworzu - 787 784 556',
+    title: 'Kama-przydworz.pl - wynajem domków w Przydworzu - 532 623 229',
 
     meta: [
       { charset: 'utf-8' },
@@ -17,14 +17,14 @@ export default {
         // hid: 'description',
         name: 'description',
         content:
-          'Domki Przydwórz(wynajem)|Wynajem domków letniskowych w Przydworzu|+48787784556'
+          'Domki Przydwórz(wynajem)|Wynajem domków letniskowych w Przydworzu|+48532623229'
       },
 
       {
         // hid: 'Keywords',
         name: 'Keywords',
         content:
-          'Kama-przydworz.pl,kama-przydwórz,kama-przydwórz.pl,+48 787 784 556,+48787784556,787784556,kama,domki, domy,wynajem domków,wynajem domki,wynajem domków w Przydworzu,domki Przydwórz,domki Przydworz,Przydwórz,Przydworz,wieczno,kwatery,wynajem,odpoczynek,wakacje,pokoje,pokoj,pokój,wypoczynek, tanie domki, tani wypoczynek, tani'
+          'Kama-przydworz.pl,kama-przydwórz,kama-przydwórz.pl,+48 532 623 229,+48532623229,532623229,kama,domki, domy,wynajem domków,wynajem domki,wynajem domków w Przydworzu,domki Przydwórz,domki Przydworz,Przydworz domki,Przydwórz,Przydworz,wieczno,kwatery,wynajem,odpoczynek,wakacje,pokoje,pokoj,pokój,wypoczynek,tanie domki,tani wypoczynek,tani,Wieczno,jezioro Wieczno,domki do wynajęcia,przydwórz domki,przydworz domki do wynajecia,domki w przydworzu,jezioro wieczno noclegi,noclegi,domki letniskowe przydwórz,domki przydwórz wynajem'
       },
       {
         // hid: 'robots',

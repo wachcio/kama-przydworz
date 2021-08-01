@@ -8,7 +8,7 @@
         path="houses/"
         :img="item.img"
         :description="item.text"
-        :alt="`Kama Przydwórz domek na wynajem_${index+1}`"
+        :alt="`Kama Przydwórz domek na wynajem_${index + 1}`"
         :reverse="index % 2"
       />
     </div>
@@ -17,6 +17,8 @@
 
 <script>
 import PictureDescription from '@/components/PictureDescription.vue'
+import { mapState } from 'vuex'
+
 export default {
   name: 'Houses',
   components: { PictureDescription },
@@ -57,12 +59,12 @@ export default {
         {
           img: 'IMG_9251.jpg',
           text:
-            'Więcej informacji udzielamy pod numerem telefonu +48 787 784 556'
+            'Więcej informacji udzielamy pod numerem telefonu +48 532 623 229'
         }
       ]
     }
   },
-  computed: {},
+  computed: { ...mapState(['phoneNumber', 'phoneNumberTxt']) },
   watch: {},
   created() {},
   methods: {}

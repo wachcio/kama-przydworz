@@ -11,7 +11,7 @@
         <Contact />
       </main>
       <footer>
-        <p>Wachcio &copy; 2019-2020</p>
+        <p>Wachcio &copy; 2019-{{ getCurrentYear }}</p>
       </footer>
       <Arrow />
     </b-container>
@@ -39,6 +39,12 @@ export default {
     Regulations,
     Contact,
     Arrow
+  },
+  computed: {
+    getCurrentYear() {
+      let year = new Date()
+      return year.getFullYear()
+    }
   }
 }
 </script>

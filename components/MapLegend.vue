@@ -3,7 +3,11 @@
     <h2>Plan ośrodka</h2>
     <div class="map-legend__container">
       <div class="map">
-        <!-- <img :src="mapSVG" class="map__img" @click="mapFullSizeShowHide()" /> -->
+        <!-- <img
+          :src="require(`@/assets/img/resort/fullSize/map.svg`)"
+          class="map__img"
+          @click="mapFullSizeShowHide()"
+        />-->
 
         <!-- Dobra wersja -->
         <MapSVG class="map__img" @click="mapFullSizeShowHide()" />
@@ -46,7 +50,7 @@ import MapSVG from '@/assets/img/resort/fullSize/map.svg?inline'
 
 export default {
   name: 'MapLegend',
-  components: {},
+  components: { MapSVG },
   props: {},
   data() {
     return {
@@ -83,7 +87,6 @@ export default {
       ]
     }
   },
-  components: { MapSVG },
   computed: {
     fullSizeStyle() {
       return this.mapFullSize ? { display: 'block' } : { display: 'none' }
