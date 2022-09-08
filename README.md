@@ -1,6 +1,8 @@
-# kama-przydworz
+# Kama-przydwórz
+Strona powstała w 2019 roku we frameworku Nuxt.js jako promocja domków letniskowych do wynajęcia w Przydworzu (nad jeziorem Wieczno).
 
-> Kama-przydwórz. Domki letniskowe do wynajęcia w Przydworzu (nad jeziorem Wieczno)
+## Demo
+https://kama-przydworz.pl/
 
 ## Build Setup
 
